@@ -1,0 +1,1682 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!--//로그 데이터 쌓기- 2018.11.29 김소남 추가 -->  
+<script language="JavaScript">
+function go_Area(code) {
+	var loc;
+	//var AreaNo;
+	switch(code.substring(0,1)) {
+		case "I" : loc = "서울특별시";  break; //AreaNo = 9;
+		case "E" : loc = "광주광역시";  break; //AreaNo = 8;
+		case "F" : loc = "대구광역시";  break; //AreaNo = 11;
+		case "G" : loc = "대전광역시";  break; //AreaNo = 10;
+		case "H" : loc = "부산광역시";  break; //AreaNo = 2;
+		case "J" : loc = "울산광역시";  break; //AreaNo = 3;
+		case "K" : loc = "인천광역시";  break; //AreaNo = 4;
+		case "B" : loc = "경기도";  break; //AreaNo = 5;
+		case "A" : loc = "강원도";  break; //AreaNo = 1;
+		case "C" : loc = "경상남도";  break; //AreaNo = 6;
+		case "D" : loc = "경상북도"; break; //AreaNo = 7; 
+		case "L" : loc = "전라남도";  break; //AreaNo = 13;
+		case "M" : loc = "전라북도";  break; //AreaNo = 12;
+		case "O" : loc = "충청남도"; break; //AreaNo = 16; 
+		case "P" : loc = "충청북도";  break; //AreaNo = 15;
+		case "N" : loc = "제주도";  break; //AreaNo = 14;
+		case "R" : loc = "아시아";  break; //AreaNo = 20;
+		case "S" : loc = "북미";  break; //AreaNo = 30;
+		case "T" : loc = "중남미";  break; //AreaNo = 40;
+		case "U" : loc = "유럽"; break; // AreaNo = 50; 
+		case "V" : loc = "오세아니아";  break; //AreaNo = 60;
+		case "W" : loc = "아프리카";  break; //AreaNo = 70;
+		//중국, 미국, 일본 추가
+		case "X" : loc = "중국"; break; // AreaNo = 80; 
+		case "Y" : loc = "미국";  break; //AreaNo = 81;
+		case "Z" : loc = "일본";  break; //AreaNo = 82;
+		//-->
+
+		//case "3" : loc = "개성공업지구";  break;
+		//case "2" : loc = "금강산관광특구"; break;
+
+		case "Q" : loc = "전국";  break; //AreaNo = 0;
+	}
+	loc = "<b>" + loc + "</b>";
+	
+	top.location.href = "/List_GI/GI_Area_List.asp?loc="+loc+"&b_code=0&code=0&area="+code;
+	
+}
+
+function go_Area1(AreaNo) {
+
+	var loc = "";
+	
+	switch(AreaNo) {
+		case "9" : loc = "서울특별시"; AreaNo = "I";  break; 
+		case "8" : loc = "광주광역시"; AreaNo = "E"; break; 
+		case "11" : loc = "대구광역시";  AreaNo = "F"; break; 
+		case "10" : loc = "대전광역시"; AreaNo = "G"; break; 
+		case "2" : loc = "부산광역시";  AreaNo = "H"; break; 
+		case "3" : loc = "울산광역시";  AreaNo = "J"; break; 
+		case "4" : loc = "인천광역시";  AreaNo = "K";  break;
+		case "5" : loc = "경기도"; AreaNo = "B"; break; 
+		case "1" : loc = "강원도"; AreaNo = "A";  break; 
+		case "6" : loc = "경상남도";  AreaNo = "C"; break;
+		case "7" : loc = "경상북도"; AreaNo = "D";  break; 
+		case "13" : loc = "전라남도"; AreaNo = "L"; break; 
+		case "12" : loc = "전라북도";  AreaNo = "M"; break;
+		case "16" : loc = "충청남도"; AreaNo = "O";  break; 
+		case "15" : loc = "충청북도";  AreaNo = "P"; break; 
+		case "14" : loc = "제주도";  AreaNo = "N"; break; 
+		case "20" : loc = "아시아"; AreaNo = "R";  break; 
+		case "30" : loc = "북미";  AreaNo = "S"; break; 
+		case "40" : loc = "중남미"; AreaNo = "T";  break; 
+		case "50" : loc = "유럽";  AreaNo = "U";  break; 
+		case "60" : loc = "오세아니아"; AreaNo = "V";  break; 
+		case "70" : loc = "아프리카";  AreaNo = "W"; break; 
+		case "80" : loc = "중국";  AreaNo = "X";  break; 
+		case "81" : loc = "미국"; AreaNo = "Y";  break; 
+		case "82" : loc = "일본";  AreaNo = "Z"; break;
+		//case "90" : loc = "개성공업지구";  AreaNo = "1"; break;
+		//case "91" : loc = "금강산관광특구";  AreaNo = "2"; break;
+		case "0" : loc = "전체";   AreaNo = "Q"; break;
+	}
+
+	loc = "<b>" + loc + "</b>";
+	AreaNo = AreaNo + "000"
+	
+	location.href = "/List_GI/GI_Area_List.asp?loc="+loc+"&b_code=0&code=0&area="+AreaNo;
+		
+	
+}
+
+function go_BDInfo(BDCode) {
+	
+	location.href = "/List_GI/GI_Building_Info.asp?BDCode="+BDCode;
+		
+
+
+}
+
+
+</script>
+
+
+
+
+<html lang="ko">
+<head>
+
+
+<!-- 게임잡 메타태그 추가 -->
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta http-equiv="Content-Language" content="ko-KR" >
+
+<meta name="writer" content="게임잡">
+<meta name="title" content="[FOV STUDIO] - [FOV STUDIO VR, AR 플랫폼 기획 경력/신입 채용]">
+<meta name="description" content="[FOV STUDIO] 채용 | [FOV STUDIO VR, AR 플랫폼 기획 경력/신입 채용] | [신입·경력] | [학력무관] | [정규직] | [면접 시 협의] | [채용시 마감]">
+
+<meta property="og:site_name" content="게임잡" >
+<meta property="og:image" content= "http://i.gamejob.co.kr/pc/images/join/h_logo_gamejob.png">
+<meta property="og:title" content="[FOV STUDIO] [FOV STUDIO VR, AR 플랫폼 기획 경력/신입 채용]">
+<meta property="og:description" content="[FOV STUDIO]의 신입·경력사원 채용이 채용시 마감까지 게임잡을 통해 진행 됩니다. [학력무관]의 정규직 채용이며, 근무 예정지는 서울 > 강남구 입니다.">
+<meta property="og:url" content="[http://www.gamejob.co.kr/List_GI/GIB_Read.asp?GI_No=168088]">
+
+<link rel="SHORTCUT ICON" href="http://www.gamejob.co.kr/">
+
+<script type="text/javascript" src="/include/Js/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/default.css">
+<script type="text/javascript" src="/include/js/flash.js"></script>
+<script type="text/javascript" src="/include/js/Common_Class.js"></script>
+<script type="text/javascript" src="/include/js/Community/Community.js"></script>
+<script type="text/javascript" src="/include/js/Gi/_Read.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+	//기업 이미지보기
+	function ImageView(idx,cid,type,name,title) { 
+		var viewpage = "http://file.gamejob.co.kr/Co/Photo/Image_Thumb_View.asp?IDX="+idx+"&M="+cid+"&IMG_Type="+type+"&IMG_Name="+escape(name)+"&IMG_Title="+escape(title)+"&Re_Host=www.gamejob.co.kr";
+		window.open(viewpage,'ImageView','toolbar=no,location=no,directories=no,status=no,scrollbars=no,menubar=no,width=500,height=580'); 
+	}
+
+	// 인쇄하기
+	function Print_Win(gino,b,c,cid,Log_check) {
+		if (Log_check == "") {
+			if (confirm("[인쇄하기]는 게임잡 회원 로그인 후\n\n 사용가능 합니다. 로그인 하시겠습니까?")) {
+				var re_url = "/List_GI/GIB_Read.asp?GI_No=" + gino;			
+				location.href="/Login/Login_Tot.asp?re_url=" + escape(re_url);				
+			}
+		}	else	{
+			var a = "/List_GI/GI_Preview.asp?Type=Read&GI_No=" + gino;
+				OpenWin = window.open( a ,'printwin','toolbar=no,location=yes,directories=no,status=no,scrollbars=yes,menubar=no,width=' + b + ',height=' + c ); 
+		}
+	}
+ //전달하기
+	function gi_mail(mid,gino,cid) {
+		var re_url = "/List_GI/GIB_Read.asp?GI_No=" + gino;
+
+		if (mid == "") {
+		
+			if (confirm("[전달하기]는 게임잡 회원 로그인 후\n\n 사용가능 합니다. 로그인 하시겠습니까?")) {
+				location.href="/Login/Login_Tot.asp?re_url=" + escape(re_url);				
+			}
+		
+		}	else	{
+			var linkpage = "/List_GI/GI_Email.asp?gi_no=" + gino  + "&re_url=" + escape(re_url);
+				farwindow = window.open('','LinksRemote','width=400,height=350, toolbar=0,location=yes,scrollbars=0,resizable=no');
+				if (farwindow != null) {
+					if (farwindow.opener == null) {
+						farwindow.opener = self;
+					}
+					farwindow.location.href = linkpage;
+				}
+		}
+
+	}
+
+	// 온라인 입사지원 눌렀는데 로그인이 안되있는 경우.
+	function User_Login_loc(gino,Log_check) {
+		if (Log_check == "") {
+			if (confirm("입사지원은 개인회원 로그인 후\n\n사용가능 합니다. 로그인 하시겠습니까?")) {
+				var re_url = "/List_GI/GIB_Read.asp?GI_No=" + gino;			
+				location.href="/Login/Login_GG.asp?re_url=" + escape(re_url);				
+			}
+		}
+	} 
+
+
+	function ChartView(mid,gino,Where_Url) {
+		if (mid == "") {
+			if (confirm("'개인회원' 로그인 후 사용가능 합니다.\n\n지금 로그인 하시겠습니까?")) {
+				var re_url = "/List_GI/GIB_Read.asp?" + Where_Url;
+				location.href="/Login/Login_GG.asp?re_url=" + re_url;				
+			}
+		}	else {
+			//location.href="/Text_User/Apply_Chart/Basic_Chart.asp?GI_No=" + gino;
+			var url = "/Text_User/Apply_Chart/Basic_Chart.asp?GI_No=" + gino;
+			window.open(url,"ChartView");
+		}
+	}
+
+/*
+	//현재페이지출력방지
+	var hideBuf;
+	function hideBeforePrint()
+	{
+		hideBuf = document.body.innerHTML;
+		document.body.innerHTML = '';
+	}
+
+	function showAfterPrint()
+	{
+		document.body.innerHTML = hideBuf;
+	}
+	document.onkeydown = processKey;
+	window.onbeforeprint = hideBeforePrint;
+	window.onafterprint = showAfterPrint;
+*/
+//-->
+</script>
+
+<script type="text/javascript">
+// iframe resize
+  function autoResize(i)
+  {
+    var iframeHeight=
+    parent.document.getElementById("GI_Work_Content").contentWindow.document.body.scrollHeight;
+    parent.document.getElementById("GI_Work_Content").height=iframeHeight+20;
+  }
+
+  function ifrmNavi(arg){
+    if(navigator.userAgent.indexOf('Mac') != -1){
+      setTimeout("autoResize()",3000);
+    }else{
+      if (navigator.appName == "Opera"){
+        setTimeout("autoResize()",3000);
+      }else{
+        autoResize(arg);
+      }
+    }
+  }
+</script>
+    
+
+<script type="application/ld+json"> {
+    "@context":"http://schema.org/",
+    "@type":"JobPosting",
+    "title":"VR, AR 플랫폼 기획 경력/신입 모집",
+    "description":"㈜FOV STUDIO<br/>경력 : 신입·경력<br/>학력 : 학력무관<br/>급여 : 면접 시 협의<br/>고용형태 : 정규직<br/>성별 : 성별무관<br/>마감일 : 채용시 마감<br/>기업의 채용공고 확인하시고 연봉, 문화 등의 기업정보와 자소서, 서류, 면접 합격 비법도 알아가세요.",
+    "datePosted":"2019-12-11 15:02",
+    "validThrough":"2020-04-06 오전 10:36:50",
+    "employmentType":["FULL_TIME"],
+    "hiringOrganization":{
+        "@type":"Organization",
+        "name":"FOV STUDIO",
+        "sameAs":"http://www.fov-studio.co.kr",
+        "logo":"http://file.gamejob.co.kr/Co/Logo/GJ_Co_Logo_View.asp?FN=2019/11/GJ_CoLogo_21019235.png"
+    },
+    "jobLocation":{
+        "@type":"Place",
+        "address":{
+            "@type":"PostalAddress",
+            "streetAddress":"논현로 22",
+            "addressLocality":"강남구 개포동",
+            "addressRegion":"서울",
+            "postalCode":"06313",
+            "addressCountry":"Republic of Korea"
+        }
+    }
+    ,"baseSalary":{
+        "@type":"MonetaryAmount",
+        "currency":"KRW",
+        "value":{
+            "@type":"QuantitativeValue",
+            "value":"면접 시 협의",
+            "unitText":"YEAR"
+        }
+    }
+}
+</script>
+
+</head>
+<body id="listGi" class="tempV01">
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" >
+
+<div id="accessibility">
+	<h1>게임 전문 리크루팅 No.1 게임잡 - 채용정보 상세보기</h1>
+	<ul>
+		<li><a href="#asMainWrap">컨텐츠 바로가기</a></li>
+	</ul>
+</div>
+<hr>
+<div id="wrap">
+	<!--// Sub 글로벌-->
+	<script language="javascript">
+  var _NiKwdAdvertiserID = "97";
+</script>
+<script type="text/javascript" src="/Include/Js/NiKwd.roi.tracer.land.js"></script>
+<!-- //통합검색&배너 영역 -->
+	<script type="text/JavaScript">
+			<!--
+    //키워드 검색
+    (function (a) {
+        a(document).ready(function () {
+
+            a("#m_logout").click(function () {
+                location.href = "/Login/Logout.asp";
+            });
+
+            a("#c_logout").click(function () {
+                location.href = "/Login/Logout.asp";
+            });
+        });
+    })(jQuery);
+
+    function gl_form_send() {
+        var gl_form = document.gl_form;
+        if (gl_form.Key_Word.value.length < 2) {
+            alert("\n 한글자 이상의 키워드를 입력해주세요!");
+            gl_form.Key_Word.focus();
+            return false;
+        }
+
+        var stext = gl_form.Key_Word.value;
+        for (var i = 0; i < stext.length; i++) {
+            if (stext.indexOf("+") != -1) {
+                stext = stext.replace("+", "%2B")
+            }
+            if (stext.indexOf("#") != -1) {
+                stext = stext.replace("#", "%23")
+            }
+
+        }
+
+        stext = stext.replace("(주)", "");
+        stext = stext.replace("㈜", "");
+        if ((stext.length == 1) && (stext == "'")) {
+            alert("\n 키워드를 입력해 주세요.!");
+            gl_form.Key_Word.value = "";
+            gl_form.Key_Word.focus();
+            return false;
+        }
+
+        var strUrl = "/List_GI/GI_Search_Keyword.asp?S_Div=GI_Keyword&S_Text=" + stext;
+
+        document.gl_form.action = strUrl;
+        return true;
+    }
+
+    function go_keyword(stext) {
+        top.location.href = "/List_GI/GI_Search_Keyword.asp?S_Div=GI_Keyword&S_Text=" + stext;
+    }
+    //-->
+			</script>
+
+<style>
+/* 191212 스타일 추가 */
+.table_admin { width: 100%; border: 1px solid #cbcbcb; border-right: none; }
+.table_admin th { background: #f1f1f1; width: 50%; height: 35px; font-size: 12px; border-bottom: 1px solid #cbcbcb; border-right: 1px solid #cbcbcb; }
+.table_admin td { border-right: 1px solid #cbcbcb; padding: 15px 30px; }
+td { font-family: 굴림,arial,verdana; font-size: 12px; border: 0; }
+
+/* GNB 개편 - 2017.09 */
+body {padding-top:163px; /* header height + 10 */}
+input[type=text]::-ms-clear,
+input[type=search]::-ms-clear {display: none; }
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {display: none;}
+#gnb .btn {display:inline-block; padding:7px 5px; height:30px; border:1px solid #e1e1e1; background:transparent; box-sizing:border-box; font-family:inherit; font-size:12px; color:#666; text-align:center; vertical-align:middle; line-height:1; position:relative; letter-spacing:-0.5px; cursor:pointer;}
+#gnb .btnSch {display:block; padding:6px 10px 6px 5px; height:100%; border:0; position:absolute; top:0; right:0; }
+#gnb [class*=ico] {display:inline-block; background:url(http://i.gamejob.co.kr/pc/images/spr.png) no-repeat 0 0; vertical-align:middle;}
+#gnb .sprLogo {background:url(http://i.gamejob.co.kr/pc/images/common/spr_logo.png); background-repeat:no-repeat;}
+#gnb .ipWrap {display:inline-block; position:relative; height:30px; font-size:14px; color:#333; line-height:1.3; box-sizing:border-box; /*background:#fff;*/ vertical-align:middle; }
+#gnb .ipWrap .ipBx {display:inline-block; padding:0 10px 0 10px; width:100%; height:100%; min-height:auto; border:1px solid #e1e1e1; font-family:inherit; font-size:12px; color:inherit; }
+#gnb {position:fixed; top:0; left:0; width:100%; background:#fff; z-index:100000; font:13px "Malgun Gothic", "맑은고딕", "Dotum", "돋움", "sans-serif"; letter-spacing:-0.5px;}
+#gnb .gnbInner {position:relative; width:900px; margin:0 auto;}
+#gnb .gnbSec_01 {height:102px; padding-top:30px; border-bottom:1px solid #ebeef3; box-sizing:border-box;}
+#gnb .logo,
+#gnb .mainSch {float:left;}
+#gnb .logo h1 a {display:block; width:165px; height:48px; margin-top:-2px;}
+/*#gnb .gnbBnr {float:right; margin-top:14px; }
+#gnb .gnbBnr a {display:block; width:108px; height:16px; background-position:0 -110px;}
+#gnb .gnbBnr a:focus,
+#gnb .gnbBnr a:hover {background-position:0 -130px;}*/
+#gnb .headBann{position:absolute; right:0; top:-18px;}
+#gnb .headBann .headBannBtns{position:absolute; right:1px; bottom:-14px; display:none;}
+#gnb .headBann .headBannBtns button{display:block; overflow:hidden; text-indent:-9999px; width:14px; height:14px; float:left; margin-left:-1px; position:relative; border:0;}
+#gnb .headBann .headBannBtns button:focus{z-index:2;}
+#gnb .headBann .headBannBtns button.btnBannPrev{background-position:-220px -40px;}
+#gnb .headBann .headBannBtns button.btnBannNext{background-position:-233px -40px;}
+#gnb .headBann .bannBx{width:135px; height:57px; position:relative; overflow:hidden;}
+#gnb .headBann .bannBx a{position:absolute; left:100%; top:0; display:block;}
+#gnb .headBann .bannBx a.on{left:0;}
+#gnb .mainSch {padding-left:35px;}
+#gnb .mainSch .ipWrap {width:410px; height:42px;}
+#gnb .mainSch .ipBx {padding-right:46px; width:100%; height:100%; border:2px solid #00b5e2; box-sizing:border-box; font-size:15px; color:#222}
+#gnb .mainSch .btnSch {padding:6px 13px; background:#00b5e2;}
+#gnb .mainSch .btnSch .ico {width:20px; height:20px; background-position:-190px -70px;}
+#gnb .gnbSec_02 {height:51px; border-bottom:1px solid #00b5e2; box-sizing:border-box;}
+#gnb .nav {float:left;}
+#gnb .nav li {float:left;}
+#gnb .nav li + li {margin-left:54px;}
+#gnb .nav li a {display:block; height:50px; font-size:16px; font-weight:bold; color:#212121; line-height:50px;}
+#gnb .nav li a:focus, #gnb .nav li a:hover, #gnb .nav li a.on {font-weight:bold;}
+#gnb .myMenu {float:right; position:relative;}
+#gnb .myMenu .btnMyHome {display:block; height:50px; font-size:14px; color:#a6a6a6; line-height:50px;}
+#gnb .myMenu .btnMyHome .ico {width:26px; height:24px; margin-right:5px; background-position:-40px 0; opacity:.5;}
+#gnb .myMenu:focus .btnMyHome,
+#gnb .myMenu:hover .btnMyHome {color:#555;}
+#gnb .myMenu:focus .btnMyHome .ico,
+#gnb .myMenu:hover .btnMyHome .ico {opacity:1}
+#gnb .myMenu .dropdown {display:none; position:absolute; top:56px; right:-10px; width:154px; z-index:100;}
+#gnb .myMenu .dropdown dl {padding:0 16px; background:#fff; border:1px solid #c8cdd5;}
+#gnb .myMenu .dropdown dl:before {content:""; position:absolute; top:-14px; right:25px; width:28px; height:15px; background:url(http://i.gamejob.co.kr/pc/images/spr.png) no-repeat -290px -150px; }
+#gnb .myMenu .dropdown dd {padding:12px 0;}
+#gnb .myMenu .dropdown dd + dd {border-top:1px solid #dee3eb;}
+#gnb .myMenu .dropdown dd li {padding:2px 6px; }
+#gnb .myMenu .dropdown dd li .mn {display:block; padding:2px 0; font-size:12px; color:#888; letter-spacing:-1.5px;}
+#gnb .myMenu .dropdown dd li .mn:focus,
+#gnb .myMenu .dropdown dd li .mn:hover {color:#222; text-decoration:underline;}
+#gnb .myMenu .dropdown dd li.btnMn {padding:0; text-align:center; font-size:11px; color:#555;}
+#gnb .myMenu .dropdown dd li.btnMn + li.btnMn {margin-top:6px;}
+#gnb .myMenu .dropdown dd li .btn {padding:6px 5px 8px; width:100%; height:28px; border-color:#c8cdd5; font-size:11px; color:#888;}
+#gnb .myMenu .dropdown dd li .btn:focus,
+#gnb .myMenu .dropdown dd li .btn:hover {border-color:#999; color:#000;}
+#gnb .myMenu:focus .dropdown,
+#gnb .myMenu:hover .dropdown {display:block;}
+
+</style>
+<!-- 게임잡 uit 스크립트 -->
+<script type="text/javascript" src="http://i.gamejob.co.kr/pc/js/ui_GJ.js?v=201908081400"></script>
+<div id="gnb">
+	<div class="gnbSec_01 cf">
+		<div class="gnbInner">
+			<div class="logo">
+				<h1><a href="/"><img src="http://i.gamejob.co.kr/pc/images/common/logo.png" alt="게임, 직업이 되다! GAMEJOB"></a></h1>
+			</div>
+
+			<div class="mainSch">
+				<form name="gl_form" method="post" onsubmit="return gl_form_send();" >
+				<fieldset class="cf">
+					<legend>통합검색 입력 폼</legend>
+					<span class="formWrap ipWrap schWrap">
+		                <input type="search" class="ipBx" name="Key_Word" maxlength="" title="검색어 입력">
+		                <button type="submit" id="submitBtn" class="btn btnSch"><i class="ico"></i><em class="skip">검색</em></button>
+		            </span>
+				</fieldset>
+				</form>
+			</div>
+<!--			<div class="gnbBnr">
+				<a href="http://www.jobkorea.co.kr" target="_blank" class="sprLogo"><span class="skip">잡코리아</span></a>
+			</div>-->
+            <div class="headBann">
+                <strong class="skip">잡코리아 주요 서비스</strong>
+
+                <div class="headBannBtns" style="display: block;">
+                    <button type="button" class="btnBannPrev ico">이전</button>
+                    <button type="button" class="btnBannNext ico">다음</button>
+                </div>
+
+                <div class="bannBx">
+                    <!-- 첫번째 배너 클래스 on -->
+                    <a href="http://www.jobkorea.co.kr" class="on" target="_blank"><img src="http://i.gamejob.co.kr/pc/images/banner/gnb/bann_jk.png?20190715" alt="끝이 다른 시작 JOBKOREA" width="135" height="57"></a>
+                    <a href="http://www.albamon.com" target="_blank"><img src="http://i.gamejob.co.kr/pc/images/banner/gnb/bann_alba.png" alt="알바의 신기술 albamon" width="135" height="57"></a>
+                    <a href="http://campusmon.jobkorea.co.kr" target="_blank"><img src="http://i.gamejob.co.kr/pc/images/banner/gnb/bann_campus.png" alt="공모전·박람회 CAMPUS MON" width="135" height="57"></a>
+                    <a href="https://learning.jobkorea.co.kr" target="_blank"><img src="http://i.gamejob.co.kr/pc/images/banner/gnb/bann_jkr.png" alt="나만을 위한 맞춤 학습 잡코리아 러닝" width="135" height="57"></a>
+                </div>
+            </div>
+
+		</div>
+	</div>
+
+	<div class="gnbSec_02 cf">
+		<div class="gnbInner">
+			<nav class="nav">
+	            <h2 class="skip">게임잡 서비스 메뉴</h2>
+				<ul class="cf">
+                    <li><a href="/main/home" class="">홈</a></li>
+					<li><a href="/Recruit/Main" class="on">채용정보</a></li>
+					<li><a href="/community/talk/list" class="">커뮤니티</a></li>
+					<li><a href="/Company/list" class="">기업정보</a></li>
+					<li><a href="/List_GG/GG_Main.asp" class="">인재정보</a></li>
+					<li><a href="/Project/PM_Main.asp" class="">프로젝트</a></li>
+				</ul>
+			</nav>
+			<div class="myMenu">
+                
+                <a href="/Login/Login_TOT.asp" class="btnMyHome"><i class="ico"></i>MY홈</a>
+                
+				<div class="dropdown">
+					<!-- 비로그인 서비스 메뉴 -->
+                    
+					<dl>
+						<dt class="skip">회원 서비스 메뉴</dt>
+						<dd>
+							<ul>
+								<li class="btnMn"><a href="/Login/Login_TOT.asp" class="btn btnLogin">로그인</a></li>
+								<li class="btnMn"><a href="/Text/Promise.asp" class="btn btnjoin">회원가입</a></li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li><a href="/Help/Search_ID.asp" class="mn">아이디 찾기</a></li>
+								<li><a href="/help/Search_PWD.asp" class="mn">비밀번호 찾기</a></li>
+							</ul>
+						</dd>
+						<dd>
+							<ul>
+								<li><a href="/Service_GJ/Sitemap.asp" class="mn">사이트맵</a></li>
+								<li><a href="/Help/" class="mn">고객센터</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+					<!-- 개인회원 서비스 메뉴 -->
+                    
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<div id="adSubLeft">
+	
+<iframe width="90" height="154" noresize scrolling="no" frameborder="0" marginheight="0" marginwidth="0" src="http://ads.jobkorea.co.kr/RealMedia/ads/adstream_sx.ads/gamejob/sub@Left" title="광고"></iframe> 
+</div>
+<hr>
+
+
+
+			<!--2011-06-30 까지 이벤트 배너 900x70-->
+			
+	<div id="mainWrap">
+	<a name="asMainWrap"></a>
+
+		<div id="content">
+			<!--// 컨텐츠 넣는 영역 -->
+			<div class="free">
+				<div id="gibReadTop">
+				<form name="form" method="post">
+				<input type=hidden name=loc>
+				<input type="hidden" Name="Gi_No" value="168088">
+				<input type="hidden" Name="GI_Part_No">
+				<input type="hidden" Name="RSC" value="21">
+
+				<p class="date" style="right:150px;"><em>수정일</em>: 2019-12-11 15:02</p>	
+				<p class="date"><em>등록일</em>: 2019-09-27 12:53</p>	
+				<h1>VR, AR 플랫폼 기획 경력/신입 모집</h1>
+				<div class="coInfoRight">
+					<!--<h2>㈜FOV STUDIO<a href="/Company/Detail?M=21019235"><img src="/images/Btn/co_info_view.gif" alt="기업정보 보기"></a></h2>
+					<p class="fs11">채용정보 <strong><a href="/Company/Detail?M=21019235">4건</a></strong> 진행중</p>-->
+					<h2>㈜FOV STUDIO<a href="/Company/Detail?M=21019235"><img src="/images/Btn/co_info_view.gif" alt="기업정보 보기"></a></h2>
+					<p class="fs11">채용정보 <strong><a href="/Company/Detail?tabcode=3&M=21019235">4건</a></strong> 진행중</p>		
+					<table summary="기업 기본 정보">
+						<caption class="skip">기업 기본 정보 요약보기</caption>		
+						<thead class="skip">
+						<tr>
+							<th scope="col">항목</th>
+							<th scope="col">내용</th>
+							<th scope="col">항목</th>
+							<th scope="col">내용</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr> 
+							<th scope="row" class="fc_blue">기업형태</th>
+							<td>비상장(중소기업)</td>
+							<th scope="row" class="fc_blue right">대표자명</th>
+							<td>이태수</td>
+						</tr>
+						<tr>
+							<th scope="row" class="fc_blue">설립년도</th>
+							<td>2016년</td>
+							<th scope="row" class="fc_blue">사원수</th>
+							<td>12 명</td>
+						</tr>					
+						<tr>
+							<th scope="row" class="fc_blue">주요 사업내용</th>
+							<td colspan="3">VR,App,Game,WebGL,SI 컨텐츠 개발</td>						
+						</tr>
+						<tr>
+							<th scope="row" class="fc_blue">대표 게임명</th>
+							<td colspan="3">-</td>						
+						</tr>
+						</tbody>
+					</table>	
+					<div class="photo">
+						<h3 class="skip">포토기업정보</h3>
+					
+						<dl >
+							<dt><a href="#" onClick="ImageView('9075','21019235','1','2017\5\GJ_Co_fovstudio_02017051615353.jpg','업무공간');return false;"><img src="http://file.gamejob.co.kr/Co/Photo/Image_View.asp?FN=2017\5\GJ_Co_fovstudio_02017051615353.jpg" alt="업무공간" width="82" height="62"></a></dt>
+							<dd>업무공간</dd>
+						</dl>
+					
+						<dl >
+							<dt><a href="#" onClick="ImageView('9074','21019235','1','2017\5\GJ_Co_fovstudio_12017051615332.JPG','업무공간');return false;"><img src="http://file.gamejob.co.kr/Co/Photo/Image_View.asp?FN=2017\5\GJ_Co_fovstudio_12017051615332.JPG" alt="업무공간" width="82" height="62"></a></dt>
+							<dd>업무공간</dd>
+						</dl>
+					
+						<dl >
+							<dt><a href="#" onClick="ImageView('9073','21019235','1','2017\5\GJ_Co_fovstudio_62017051615319.jpg','휴식공간');return false;"><img src="http://file.gamejob.co.kr/Co/Photo/Image_View.asp?FN=2017\5\GJ_Co_fovstudio_62017051615319.jpg" alt="휴식공간" width="82" height="62"></a></dt>
+							<dd>휴식공간</dd>
+						</dl>
+
+						<dl class="end">
+							<dt><img src="/Images/Text_Co/main_photo_no.gif" alt="포토 미등록" width="82" height="62"></dt>
+							<dd>제목</dd>
+						</dl>
+
+					</div>
+				</div>
+
+				<div class="coInfoLeft">
+
+					<!-- 로고가 있는 경우 -->
+					<dl>
+						<dt class="skip">기업 로고/URL</dt>
+						<dd class="url"><a href='javascript:void()' onClick="goHomePage('http://www.fov-studio.co.kr')">http://www.fov-studio.co.kr</a></dd>
+						<dd class="img"><table><tbody><tr><td><a href="/Company/Detail?M=21019235"><img name="cologo" src="http://file.gamejob.co.kr/Co/Logo/GJ_Co_Logo_View.asp?FN=2019/11/GJ_CoLogo_21019235.png" alt="㈜FOV STUDIO"  width="200px" height="70px"></a></td></tr></tbody></table></dd>	
+					</dl>
+					<!-- 로고가 있는 경우 -->
+
+					<!-- 채용뉴스-->
+					<div class="news">
+					
+						<h3>채용회사 뉴스검색 결과</h3>
+						<ul>
+											
+						<p>해당하는 뉴스가 없습니다.</p>
+						<p class="text">[자료제공 : 더 게임스]</p>
+
+					</div>
+					<!-- 채용뉴스-->				
+				</div>
+
+				<h3 class="skip">스크랩하기/인쇄하기/전달 하기</h3>
+					<ul class="btn">
+						<li class="frist"><a href="/List_GI/GI_Scrap.asp?GI_No=168088" onClick="Gi_Scrap('','168088','fovstudio','');return false;"><img src="/Images/Btn/icon_scrap.gif" alt="스크랩하기"></a></li>
+						<li><a href="/List_GI/GI_Preview.asp?Type=Read&GI_No=168088" target="_blank" onClick="Print_Win('168088','700','650','fovstudio','');return false;"><img src="/Images/Btn/icon_print.gif" alt="인쇄하기"></a></li>
+						<li><a href="/List_GI/GI_Email.asp?gi_no=168088" target="_blank" onClick="gi_mail('','168088','fovstudio');return false;"><img src="/Images/Btn/icon_send1.gif" alt="전달하기"></a></li>
+					</ul>
+				</div>
+				<div id="gibOutline">
+					<h2><img src="/images/title/Cinfo_T05.gif" alt="모집요강"></h2>
+					<dl>
+						<dt>모집분야</dt>
+						<dd><strong> 	<a href="/List_Gi/GI_Part_List.asp?Part_Code=9">게임기획</a> | <a href="/List_Gi/GI_Part_List.asp?Part_Code=15">플랫폼 기획</a> | </strong></dd>
+						<dt>해당키워드</dt>
+						<dd>모바일,컨셉,게임기획,밸런스기획,레벨기획,시스템기획,컨텐츠,컨텐츠기획,모바일기획,</dd>
+						<dt>게임분야</dt>
+						<dd> <font color='#5e42a6'><span class=11><b>[디바이스]</b></span> 온라인PC게임,모바일게임</font> <font color='#ae489e'><span class=11><b>[장르]</b></span> VR·AR</font></dd>
+						<dt>고용형태</dt>
+						<dd><a href="/List_Gi/GI_Job_List.asp?job=1">정규직</a></dd>
+						
+						<dt>모집인원</dt>
+						<dd>1명 / <a href=/Service_GJ/GG_Service_Chart.asp?GI_No=168088><font class=c_blue2>현재 지원자수 :&nbsp;</font>**명</a><a href=/Service_GJ/GG_Service_Chart.asp?GI_No=168088><img src=/Images/Btn/apply_chart01.gif border=0 align=absmiddle></a></dd>
+						<dt>채용직급·직책</dt>
+						<dd><a href="GI_Position_Search.asp?p_name=1">사원급</a></dd>
+						<dt>급여조건</dt>
+						<dd>면접 시 협의<a href=/Co_Info/SS_CName_List.asp><img src='/Images/Btn/pay_seach.gif' alt='연봉검색'></a></dd>
+						<dt>지원자격</dt>
+						<dd>
+							<table summary="지원자격 정보입니다." class="info">
+								<caption class="skip">지원자격 요약보기</caption>		
+								<thead>
+								<tr>
+									<th>해당분야</th>
+									<th>연령</th>
+									<th>최종학력</th>
+									<th>성별</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>신입·경력</td>
+									<td>나이제한없음</td>
+									<td>학력무관</td>
+									<td>무관</td>
+								</tr>
+								</tbody>
+							</table>	
+						</dd>
+						<!--//우대사항-->
+						
+
+					</dl>					
+					<h2><img src="/images/title/GI_title1.gif" alt="담당업무 및 자격요건"></h2>
+					<dl>
+						<dt>담당업무</dt>
+						<dd><iframe src="/Include/GI_Home/IFrame_GI_Work_Content.asp?GI_No=168088" marginHeight=0 marginWidth=0 frameborder=0 scrolling="no"onload="ifrmNavi(this)" title="담당업무" id="GI_Work_Content" name="GI_Work_Content" width="608"></iframe></dd>
+						<dt>자격조건</dt>
+						<dd>[신입, 경력]<br>
+학력: 학력무관<br>
+경력: 무관<br>
+<br>
+[우대조건] <br>
+-Unreal, Unity 능숙자 우대<br>
+-포토샵 능숙자 우대<br>
+-커뮤니케이션에 문제가 없는자<br>
+-VR, AR 기획 경력자 우대<br>
+-게임등 모든 산업분야 기획이 가능한자 우대<br>
+</dd>
+					</dl>
+					<h2><img src="/images/title/GI_title2.gif" alt="근무환경"></h2>
+					<dl>
+												
+						<dt>근무지역</dt>
+						<dd><a href="javascript:go_Area('I000')"><font color=#0066FF><u>서울</u></font></a> > 강남구</dd>
+						
+						<dt>인근지하철</dt>
+						<dd>신분당선 양재시민의 숲역 3번출구에서 1km이내 </dd>
+						<!---//복리후생--> 
+						
+						<dt>복리후생</dt>
+						<dd>
+							<dl class="bene">
+							<dt>연금·보험</dt><dd>: 국민연금, 고용보험, 산재보험, 건강보험</dd><dt>휴무·휴가</dt><dd>: 주5일근무, 연차</dd><dt>보상제도</dt><dd>: 인센티브제, 퇴직금</dd><dt>생활편의 지원</dt><dd>: 중식제공, 석식제공</dd><dt>경조사 지원</dt><dd>: 각종 경조금, 경조휴가제</dd>
+							</dl>
+						</dd>
+						
+					</dl>
+
+					<h2><img src="/images/title/GI_title3.gif" alt="모집전형 및 접수방법"></h2>
+					<dl>
+						<dt>전형절차</dt>
+						<dd>서류심사-&gt; 1차면접(실무자)-&gt; 2차면접(임원진)-&gt; 합격자발표</dd>
+						<dt>제출서류</dt>
+						<dd>이력서, 경력기술서, 자기소개서, 포트폴리오 등 <br>
+<br>
+</dd>
+						<dt>접수기간</dt>
+						<dd><em>채용시 마감</em></dd>
+
+					
+						<dt>접수방법</dt>
+						<dd>
+							<a href="/List_GI/GI_OnPass.asp" onClick="onlinePass('1','','168088','','21');return false;"><font class=c_blue u >[게임잡 온라인 입사지원]</font></a>&nbsp;&nbsp;
+						</dd>
+					
+					</dl>
+					
+					<h3 class="skip">입사지원하기</h3>
+						
+					<!-- 온라인 입사지원하기 -->
+					<div class="resu skip">							
+						<h4><a href='/Login/Login_GG.asp?re_url=/List_GI/GIB_Read.asp?GI_No=168088' onClick="User_Login_loc('168088','');return false;"><img src="/Images/btn/btn_online.gif" alt="게임잡 이력서로 온라인 입사지원하기"></a></h4>
+						<ul>
+							<li class="text">온라인 입사지원을 위해서는 게임잡에 <a href="/Text_User/Resume_Step1.asp"><strong>이력서가 등록</strong></a>되어 있어야 합니다.</li><li>이력서 등록 후 입사지원을 하시려면 <a href="/Login/Login_GG.asp?re_url=/List_GI/GIB_Read.asp?GI_No=168088" onClick="Gi_Scrap('','168088','fovstudio','');return false;"><em>해당공고를 스크랩</em></a> 해두시기 바랍니다.</li>
+						</ul>
+					</div>
+					<!-- 온라인 입사지원하기 -->
+						
+
+					<h2 class="colinfo"><img src="/images/title/GI_title4.gif" alt="담당자 정보"></h2>
+					<iframe width="100%" noresize scrolling="no" frameborder="0" marginheight="0" marginwidth="0" src="/List_Gi/GIB_Read_Person.asp?Gi_no=168088" title="담당자 연락처"></iframe>
+
+					<p class="false">※ 본 채용정보에 불법·허위·과장이나 사실과 다른 내용이 있을 경우, <a href="https://www.gamejob.co.kr/Help/Helpdesk.asp?flag=2&Cate_No=4&Gi_no=168088"><strong>여기를 클릭</strong></a>해 주세요.</p>
+					<p class="tip"> 	본 정보는 <em>㈜FOV STUDIO</em>에서 제공한 자료로 게임잡의 동의없이 무단전재 또는 재배포, 재가공할 수 없으며, 게재된 채용기업과 채용담당자의 정보는 구직활동 이외의 용도로 사용될 수 없습니다. 게임잡은 ㈜FOV STUDIO에서 게재한 자료에 대한 오류와 사용자가 이를 신뢰하여 취한 조치에 대해 책임을 지지 않습니다. <저작권자 ⓒ 게임잡. 무단전재-재배포 금지></p>
+					<p class="back"><a href="/List_GI/GI_Total_List.asp" onClick="self.close();return false;"><img src="/images/btn/back_01.gif" alt="돌아가기"></a></p>
+					<hr>
+				</div>
+
+<!--//게임잡 딥링크 : 앱 공고뷰 바로 이동 - 2018.12.20 김소남 추가 -->  
+
+ 
+
+        <!--//로컬 부스 클릭수 체크//-->
+        
+        <iframe src="GIB_Read_Gino_Cnt_ALL.asp?Gi_no=168088" width=0 height=0 marginwidth=0 marginheight=0 hspace=0 vspace=0  border=0 scrolling=no frameborder="0" title="클릭수 체크"></iframe>
+            
+				<div class="giListTable"> 
+					<a id="GList" name="GList"></a>
+					<h2 class="giCon"><strong>㈜FOV STUDIO</strong>에서 진행중인 채용정보- &nbsp; <em><a href="/Company/Detail?tabcode=3&M=21019235">4건</a> 진행중</em></h2>
+					<!-- 리스트 내용 시작 -->
+					<table class="imgGitable" summary="이표는 수정일,채용 제목, 경력, 마감일, 모집인원에 관한 정보입니다.">
+					<colgroup>
+						<col width="90px;"/>
+						<col width="390px;"/>
+						<col width="75px;"/>
+						<col width="78px;"/>
+						<col width="77px;"/>
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col" class="topColEditday">수정일</th>
+						<th scope="col">채용 제목</th>
+						<th scope="col">경력</th>
+						<th scope="col" class="endday">마감일</th>
+						<th scope="col" class="scale">모집인원</th>
+					</tr>
+					</thead>
+					<tbody>
+
+					<tr>
+						<th scope="row">12-11</th>
+						<td class="align"><a href="/List_GI/GIB_Read.asp?GI_No=168088">VR, AR 플랫폼 기획 경력/신입 모집</a> </td>
+						<td class="Career">신입·경력</td>
+						<td class="endday">채용시 마감</td>
+						<td class="right">1명<a href='/Text_User/Apply_Chart/Basic_Chart.asp?GI_No=168088' onClick="ChartView('',168088,'GI_No=168088');return false;"><img src="/images/Icon/apply_chart01.gif" alt="지원현황 통계보기"></a></td>
+					</tr>			
+
+
+	
+					<tr>
+						<th scope="row">11-21</th>
+						<td class="align"><a href="/List_GI/GIB_Read.asp?GI_No=169266">경력직 프로그래머 채용</a> </td>
+						<td class="Career">경력 1년<img class='img' src='/images/Icon/ar_above.gif' alt='이상'></td>
+						<td class="endday">채용시 마감</td>
+						<td class="right">0명<a href='/Text_User/Apply_Chart/Basic_Chart.asp?GI_No=169266' onClick="ChartView('',169266,'GI_No=168088');return false;"><img src="/images/Icon/apply_chart01.gif" alt="지원현황 통계보기"></a></td>
+					</tr>			
+
+
+	
+					<tr>
+						<th scope="row">11-21</th>
+						<td class="align"><a href="/List_GI/GIB_Read.asp?GI_No=169628">UI 디자이너 모집</a> </td>
+						<td class="Career">무관</td>
+						<td class="endday">채용시 마감</td>
+						<td class="right">1명<a href='/Text_User/Apply_Chart/Basic_Chart.asp?GI_No=169628' onClick="ChartView('',169628,'GI_No=168088');return false;"><img src="/images/Icon/apply_chart01.gif" alt="지원현황 통계보기"></a></td>
+					</tr>			
+
+
+	
+					<tr>
+						<th scope="row">11-19</th>
+						<td class="align"><a href="/List_GI/GIB_Read.asp?GI_No=137246">3D 배경 모델러 모집.</a> </td>
+						<td class="Career">신입</td>
+						<td class="endday">채용시 마감</td>
+						<td class="right">1명<a href='/Text_User/Apply_Chart/Basic_Chart.asp?GI_No=137246' onClick="ChartView('',137246,'GI_No=168088');return false;"><img src="/images/Icon/apply_chart01.gif" alt="지원현황 통계보기"></a></td>
+					</tr>			
+
+
+						
+
+
+					</tbody>
+				</table>
+				<p></p>		
+			</div>
+			</form>
+		</div>
+		<!-- 컨텐츠 넣는 영역//-->
+	</div>
+	<hr>
+		<!--// Sidebar -->
+		
+
+					<div id="sidebar" class="bgW">
+						<!-- 로그인 메뉴// -->
+						
+				
+					<!-- 로그인 전 -->
+				
+					<div class="login">
+					<!-- <p class="off"><img src="/images/common/left_login.gif" width="160" height="26" alt="게임잡 로그인하기, 아이디/패스워드 찾기" usemap="#Map_login"></p><map name="Map_login"><area shape="rect" coords="3,2,69,23" href="/Login/Login_TOT.asp?re_url=%2FList%5FGI%2FGIB%5FRead%2Easp%3FGI%5FNo%3D168088" alt="로그인"><area shape="rect" coords="73,1,157,25" href="/Help/Search_ID.asp" alt="아이디/패스워드 찾기"></map> -->
+						<div class="nSubLogWrap cf">
+							<a href="/Login/Login_TOT.asp?re_url=%2FList%5FGI%2FGIB%5FRead%2Easp%3FGI%5FNo%3D168088" class="nLogin">로그인</a>
+							<a href="/Help/Search_ID.asp" class="nForgot">ID/PW 찾기</a>
+						</div>
+					</div>
+				
+						<div class="nLtWrap">
+							<p class="nLtTit">채용정보</p>
+							<dl class="nLtBul1">
+								<dt><span class="ico"></span>주요 채용정보</dt>
+								<dd><a href="/Recruit/joblist?menucode=duty" class="col01">직종별</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=local">지역별</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=qualification">경력별</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=condition">직급·직책별</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=searchall">전체 채용정보</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=searchdetail">채용정보 상세검색</a></dd>
+							</dl>
+							<dl class="nLtBul1">
+								<dt><span class="ico"></span>게임분야별</dt>
+								<dd><a href="/Recruit/joblist?menucode=category&divice=1">온라인PC게임</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&divice=2">웹게임</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&divice=3">모바일게임</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&divice=4">콘솔게임</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&divice=5">멀티플랫폼게임</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&genre=1">RPG</a> <a href="#" onMouseOver="PlusContentView('MMORPG, MORPG, SRPG', event, this);" onMouseOut="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&genre=2">Casual</a> <a href="#" onMouseOver="PlusContentView('캐주얼, 액션, 스포츠', event, this);" onMouseOut="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&genre=3">Shooting</a> <a href="#" onMouseOver="PlusContentView('shooting, FPS, TPS', event, this);" onMouseOut="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&genre=4">SNG</a> <a href="#" onMouseOver="PlusContentView('Social Network Game', event, this);" onMouseOut="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&genre=5">Simulation</a> <a href="#" onMouseOver="PlusContentView('실시간 전략게임(RTS), 경영/육성/연예 시뮬레이션', event, this);" onMouseOut="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></dd>
+								<dd><a href="/Recruit/joblist?menucode=category&genre=6">Arcade</a> <a href="#" onMouseOver="PlusContentView('아케이드, 보드, 고스톱, 포커 등 사행성 게임 포함', event, this);" onMouseOut="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></dd>
+							</dl>
+							<dl class="nLtBul1">
+								<dt><span class="ico"></span>채용형태별</dt>
+								<dd><a href="/Recruit/joblist?menucode=condition&employ=1">정규직</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=condition&employ=10">병역특례</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=condition&employ=4-5,2-3">인턴·계약직</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=condition&employ=7-8">아르바이트</a></dd>
+								<dd><a href="/Recruit/joblist?menucode=condition&employ=9">프리랜서</a></dd>
+							</dl>										
+						</div>
+						<div class="nLtWrap">
+							<dl class="nLtBul2">
+								<dt><span class="ico"></span>기업회원 파워서비스</dt>
+								<dd><a href="/service_GJ/Fee_Option.asp?Menu_Type=GI">채용공고 파워서비스</a></dd>
+								<dd><a href="/service_GJ/Fee_booth.asp?Menu_Type=GI">배너형 채용광고</a></dd>
+								<dd><a href="/service_GJ/Fee_Searching_Option.asp?Menu_Type=GI">이력서 열람서비스</a></dd>
+								<!--<dd><a href="/service_GJ/Fee_package.asp?Menu_Type=GI">멤버십 패키지 서비스</a></dd>-->
+								<dd><a href="/service_GJ/Fee_Message.asp?Menu_Type=GI">문자메시지 발송서비스</a></dd>
+							</dl>									
+						</div>
+						<!--
+						<div class="menu Gi">
+							<h2 class="skip">채용정보 주요 메뉴</h2>
+							<h3><img src="/images/common/left_mn01.gif" width="160" height="41" alt="채용정보"></h3>
+							<p>주요 채용정보</p>
+							<ul>
+								<li><a href="/List_Gi/GI_Part.asp" class="col01">직종별</a></li>
+								<li><a href="/List_GI/GI_Area.asp">지역별</a></li>
+								<li><a href="/List_GI/GI_Career_List.asp">경력별</a></li>
+								<li><a href="/List_GI/GI_Position_List.asp">직급·직책별</a></li>
+								<li><a href="/List_GI/GI_Total_List.asp">전체 채용정보</a></li>
+								<li class="end"><a href="/List_GI/GI_Search.asp" class="col01">채용정보 상세검색</a></li>
+							</ul>
+							<p><a href="/List_GI/GI_Game_List.asp">게임분야별</a></p>
+							<ul>
+								<li class="odd"><a href="/List_GI/GI_Game_List.asp?GI_Game_Divice=1">온라인PC게임</a></li>
+								<li class="odd"><a href="/List_GI/GI_Game_List.asp?GI_Game_Divice=2">웹게임</a></li>
+								<li class="odd"><a href="/List_GI/GI_Game_List.asp?GI_Game_Divice=3">모바일게임</a></li>
+								<li class="odd"><a href="/List_GI/GI_Game_List.asp?GI_Game_Divice=4">콘솔게임</a></li>
+								<li class="odd end"><a href="/List_GI/GI_Game_List.asp?GI_Game_Divice=5">멀티플랫폼게임</a></li>
+								<li><a href="/List_GI/GI_Game_List.asp?GI_Game_Genre=1">RPG</a>
+
+								<div class="inheritReset lyTemp_1" style="position:relative;">
+									<span class="lyTemp_1_icon"><a href="#" onmouseover="PlusContentView('MMORPG, MORPG, SRPG', event, this);" onmouseout="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></span>
+								</div>									
+								</li>
+								<li><a href="/List_GI/GI_Game_List.asp?GI_Game_Genre=2">Casual</a>
+
+								<div class="inheritReset lyTemp_1" style="position:relative;">
+									<span class="lyTemp_1_icon"><a href="#" onmouseover="PlusContentView('캐주얼, 액션, 스포츠', event, this);" onmouseout="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></span>
+								</div>									
+								</li>								
+								<li><a href="/List_GI/GI_Game_List.asp?GI_Game_Genre=3">Shooting</a>
+
+								<div class="inheritReset lyTemp_1" style="position:relative;">
+									<span class="lyTemp_1_icon"><a href="#" onmouseover="PlusContentView('shooting, FPS, TPS', event, this);" onmouseout="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></span>
+								</div>									
+								</li>								
+								<li><a href="/List_GI/GI_Game_List.asp?GI_Game_Genre=4">SNG</a>
+
+								<div class="inheritReset lyTemp_1" style="position:relative;">
+									<span class="lyTemp_1_icon"><a href="#" onmouseover="PlusContentView('Social Network Game', event, this);" onmouseout="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></span>
+								</div>								
+								</li>
+								<li><a href="/List_GI/GI_Game_List.asp?GI_Game_Genre=5">Simulation</a>
+
+								<div class="inheritReset lyTemp_1" style="position:relative;">
+									<span class="lyTemp_1_icon"><a href="#" onmouseover="PlusContentView('실시간 전략게임(RTS), 경영/육성/연예 시뮬레이션', event, this);" onmouseout="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></span>
+								</div>								
+								</li>
+								<li class="end"><a href="/List_GI/GI_Game_List.asp?GI_Game_Genre=6">Arcade</a>
+
+								<div class="inheritReset lyTemp_1" style="position:relative;">
+									<span class="lyTemp_1_icon"><a href="#" onmouseover="PlusContentView('아케이드, 보드, 고스톱, 포커 등 사행성 게임 포함', event, this);" onmouseout="PlusContentOut();"><img src="/images/common/icon_more_01.gif" alt="더보기" style="cursor: pointer;"></a></span>
+								</div>
+								</li>
+							
+							</ul>
+							<p><a href="/List_GI/GI_Job_List.asp">채용형태별</a></p>
+							<ul>
+								<li><a href="/List_GI/GI_Job_List.asp?job=1">정규직</a></li>
+								<li><a href="/List_GI/GI_Job_List.asp?job=10" class="col01">병역특례</a></li>
+								<li><a href="/List_GI/GI_Job_List.asp?job=2,4">인턴·계약직</a></li>
+								<li><a href="/List_GI/GI_Job_List.asp?job=7">아르바이트</a></li>
+								<li class="end"><a href="/List_GI/GI_Job_List.asp?b_code=0&code=0&job=9">프리랜서</a></li>
+							</ul>					
+						</div>
+						<img src="/images/common/left_mn_bot.gif" alt="" id="end">
+						<img src="/images/common/left_mn_top_w.gif" alt="">
+						<div class="menu GiEtc">
+							<h3 class="skip">기타 메뉴</h3>
+							<p>기업회원 파워서비스</p>
+							<img src="/images/common/left_mn_top_g.gif" alt="">
+							<ul>
+								<li><a href="/service_GJ/Fee_Option.asp?Menu_Type=GI">채용공고 파워서비스</a></li>
+								<li><a href="/service_GJ/Fee_booth.asp?Menu_Type=GI">배너형 채용광고</a></li>
+								<li><a href="/service_GJ/Fee_Searching_Option.asp?Menu_Type=GI">이력서 열람서비스</a></li>
+								<li><a href="/service_GJ/Fee_package.asp?Menu_Type=GI">멤버십 패키지 서비스</a></li>
+								<li class="end"><a href="/service_GJ/Fee_Message.asp?Menu_Type=GI">문자메시지 발송서비스</a></li>
+							</ul>
+						</div>
+						-->
+					</div>
+					<hr>
+
+
+
+
+	<!-- + 더보기 레이어 -->
+	<div class="inheritReset lyTemp_1" style="position:relative;">
+		<div class="lyText" style="width:150px !important; position:absolute; !important;display:none;" id="PlusContent"></div>
+	</div>
+
+	<script language="javascript">
+	<!--
+		var PlusContentView = function(PlusContent, evt, currentObj)
+		{
+			if(!evt) var evt = evt || window.event;
+			var newestBody = document.documentElement; //최신버전의 브라우저들
+			var oldBody = document.body; //구 버전의 브라우저들
+
+			if (newestBody)
+			{
+				var left, top;
+				if (evt.pageX)
+				{
+					left = evt.pageX;
+					top = evt.pageY;
+				}
+				else if (evt.clientX)
+				{
+					left = evt.clientX + newestBody.scrollLeft - newestBody.clientLeft //- currentObj.offsetLeft;
+					top = evt.clientY + newestBody.scrollTop - newestBody.clientTop //- currentObj.offsetTop;
+				}
+
+				if (newestBody.parentElement && newestBody.parentElement.clientLeft)
+				{
+					var b = newestBody.parentElement;
+					left += b.scrollLeft - b.clientLeft;
+					top += b.scrollTop - b.clientTop;
+				}
+			}
+			else if (oldBody)
+			{
+				var left, top;
+				if (evt.pageX)
+				{
+					left = evt.pageX;
+					top = evt.pageY;
+				}
+				else if (evt.clientX)
+				{
+					left = evt.clientX + oldBody.scrollLeft - oldBody.clientLeft //- currentObj.offsetLeft;
+					top = evt.clientY + oldBody.scrollTop - oldBody.clientTop //- currentObj.offsetTop;
+				}
+				if (oldBody.parentElement && oldBody.parentElement.clientLeft)
+				{
+					var b = oldBody.parentElement;
+					left += b.scrollLeft - b.clientLeft;
+					top += b.scrollTop - b.clientTop;
+				}							
+			}
+
+			var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1
+			var dom=document.getElementById&&navigator.userAgent.indexOf("Opera")==-1
+
+			//와이드 모니터 (document.body.clientWidth/2) 처리
+			left = left - (document.body.clientWidth/2) + 490
+			top = top - 430;
+					
+			if (ie4 || dom)
+			{ 
+				document.getElementById("PlusContent").style.display = "block";
+				document.getElementById('PlusContent').innerHTML = "<p class='normal'>" + PlusContent + "</p>";
+				document.getElementById("PlusContent").style.position = "absolute";
+				document.getElementById("PlusContent").style.top = top + "px";
+				document.getElementById("PlusContent").style.left = parseInt(left) - 150 + "px";
+				document.getElementById("PlusContent").zindex = "50000000";
+			}
+			else if (document.layers)
+			{ 
+				document.PlusContent.display = "block";
+				document.PlusContent.innerHTML = "<p class='normal'>" + PlusContent + "</p>";
+				document.PlusContent.position = "absolute";
+				document.PlusContent.top = top + "px";
+				document.PlusContent.left = parseInt(left) - 150 + "px";
+				document.PlusContent.zindex = "50000000";
+			}
+		}
+
+		var PlusContentOut = function()
+		{
+			var ie=document.all&&navigator.userAgent.indexOf("Opera")==-1
+
+			if (ie || document.getElementById)
+			{ 
+				document.getElementById("PlusContent").style.display = "none";
+			}
+			else if (document.layers)
+			{ 
+				document.PlusContent.display = "none";
+			}
+		}
+	//-->
+	</script>
+	</div>
+	<hr>
+	<!--// Footer -->
+	
+<SCRIPT type="text/javascript" src="/include/js/flash.js"></SCRIPT>
+<script type="text/javascript">
+<!--
+function new_popup(a,b,c){
+	today = new Date()
+	var win_name = "popDialog" + today.getTime()
+	OpenWin = window.open( a ,win_name,'toolbar=no,location=no,directories=no,status=no,scrollbars=no,menubar=no,width=' + b + ',height=' + c );
+}
+function ac_show() {
+	var ac_div = document.getElementById("acDiv");
+	var ac_img = document.getElementById("acImg");
+
+	if(ac_div.style.display == "none") {
+		ac_div.style.display = "";
+		ac_img.src = "/images/gn/family_right_sub.gif";
+
+	}
+}
+function ac_hide() {
+	var ac_div = document.getElementById("acDiv");
+	var ac_img = document.getElementById("acImg");
+	if(ac_div.style.display != "none") {
+		ac_div.style.display = "none";
+		ac_img.src = "/images/gn/family_right_up_sub.gif";
+	}
+}
+
+function ac_toggle(){
+	var ac_div = document.getElementById("acDiv");
+
+	if(ac_div.style.display == "none") {
+
+		ac_show();
+	}else {
+		ac_hide();
+	}
+
+}
+//-->
+</script>
+
+
+
+					<div id="topWrapAd">
+						<h3>퀵메뉴</h3>
+						
+
+    <div class="botBanner">									
+	    <iframe width=570 height=110 noresize scrolling=no frameborder=0 marginheight=0 marginwidth=0 src="http://ads.jobkorea.co.kr/RealMedia/ads/adstream_sx.ads/gamejob/sub@Top3" title="광고"></iframe>	
+	    <p>
+	    
+		    <!--iframe width='480' height='80' frameborder='0' scrolling='no' marginwidth='0' marginheight='0' src='http://iads.jobkorea.co.kr/rpa?sid=065&out=&a0=&a1=&a2=&a3=&a4=&a5=&a6=&a7=&a8=&a9=&t=i' title="이미지 배너"></iframe-->
+		    			
+		    <!-- <iframe width=700 height=80 noresize scrolling=no frameborder=0 marginheight=0 marginwidth=0 src="http://ads.jobkorea.co.kr/RealMedia/ads/adstream_sx.ads/gamejob/sub@Bottom" title="이미지 배너"></iframe> -->
+	    </p>
+    </div>
+
+					</div>
+					<div class="nFooter">
+						<div class="nFMenu cf">
+							<ul class="cf fl">
+								<li><a href="http://company.jobkorea.co.kr" target="_blank">회사소개</a></li>
+								<li><a href="/Service_GJ/Notice.asp">공지사항</a></li>
+								<li><a href="/Service_GJ/Partners.asp">제휴안내</a></li>
+								<li><a href="/Service_GJ/Banner_QA.asp">배너광고 문의</a></li>
+								<li><a href="/Service_GJ/Sitemap.asp">사이트맵</a></li>
+								<li><a href="/Service_GJ/Provision_GG.asp">게임잡 회원약관</a></li>
+								<li><a href="/Service_GJ/privacy.asp"><strong>개인정보취급방침</strong></a></li>
+								<li><a href="javascript:new_popup('/Service_GJ/Email_Refuse.asp','380','250');">e-메일 무단 수집 거부</a></li>
+							</ul>
+							<div class="fSel fl">
+								<label for="fSel"></label>
+								<fieldset>
+									<legend>잡코리아 운영사이트</legend>
+									<select name="fSel" id="fSel" title="잡코리아 운영사이트 선택">
+										<option value="">잡코리아 운영사이트</option>
+										<option value="http://www.jobkorea.co.kr" title="새창으로 열립니다">잡코리아</option>
+										<!-- <option value="http://www.hrpartners.co.kr" title="새창으로 열립니다">HR 파트너스</option>
+										<option value="http://www.devjob.co.kr" title="새창으로 열립니다">데브잡</option> -->
+										<option value="http://www.albamon.com" title="새창으로 열립니다">알바몬</option>
+										<option value="http://www.campusmon.com" title="새창으로 열립니다">캠퍼스몬</option>
+									</select>
+									<button onclick="moveLink()" title="페이지 이동">이동</button>
+								</fieldset>
+								<form name="linkMoveForm" id="linkMoveForm" action="/main/main.do" target="_blank" title="새창으로 열립니다"></form>
+								<script type="text/javascript">
+									function moveLink() {
+										var linkUrl = $("select[name=fSel]").val();
+										if(linkUrl == "") {
+											alert("이동할 사이트를 선택해주세요");
+											return;
+										}
+													
+										$("#linkMoveForm").attr("action", linkUrl);
+										$("#linkMoveForm").submit();
+									}
+								</script>	
+							</div>
+						</div>
+						<div class="nFTxt cf">
+							<div class="nFInfo">
+								<ul class="com cf">
+									<li>서울특별시 서초구 서초대로 301 동익성봉빌딩 16~18층 잡코리아</li>
+									<li>대표: 윤병준 사업자등록번호: 110-81-34859</li>
+									<li>통신판매업 신고번호: 2016-서울서초-0287호 직업정보제공사업 신고번호 : 서울청 제2016-11호</li>
+								</ul>
+								<p class="tTit"><span class="ico"></span>콘텐츠산업진흥법에 의한 표시</p>
+								<ol class="noti">
+									<li>① 콘텐츠의 명칭 : 취업정보</li>
+									<li>② 콘텐츠의 제작 및 표시 : 2002년 1월 14일(업그레이드된 콘텐츠의 경우 갱신일)</li></li>
+									<li>③ 콘텐츠의 제작자 : 잡코리아 유한회사</li>
+									<li>④ 콘텐츠의 이용조건 : 이용약관 및 서비스 안내 참조 (동의없이 무단복제 및 가공을 금함)</li>
+								</ol>
+							</div>
+							<div class="nFTel">
+								<p class="tTit"><span class="ico"></span><strong>게임잡 고객센터</strong> <em>(월~금) 09:00~12:00 / 13:00~18:00</em></p>
+								<ul class="nFTelWrap">
+									<li class="cf">
+										<span class="boxTxt">일반문의</span>
+										<span class="telTxt">
+											<span class="tel1">02-3466-5310</span>
+											<span class="tel2">
+												<span>FAX : 02-565-9351</span>
+												<span><a href="mailto:help@gamejob.co.kr">E-Mail : help@gamejob.co.kr</a></span>
+											</span>
+										</span>
+									</li>
+									<li class="cf">
+										<span class="boxTxt">상품문의</span>
+										<span class="telTxt">
+											<span class="tel1">02-2189-1307</span>
+											<span class="tel2">
+												<span>FAX : 0504-981-3752</span>
+												<span><a href="mailto:ad@gamejob.co.kr">E-Mail : ad@gamejob.co.kr</a></span>
+											</span>
+										</span>
+									</li>
+								</ul>
+								<span class="etcService cf">
+									<span><a href="/Help/Helpdesk.asp?flag=1">1:1 고객상담<span class="ico"></span></a></span>
+									<span><a href="/Help/Faq_Group.asp?MemType=M">개인회원 FAQ<span class="ico"></span></a></span>
+									<span><a href="/Help/Faq_Group.asp?MemType=E">기업회원 FAQ<span class="ico"></span></a></span>
+								</span>
+							</div>
+						</div>
+						<p class="cpr">Copyright ⓒ1998-2016, <em>잡코리아</em> All Rights Reserved.</p>
+					</div>
+					<!-- <div id="subFooter">
+						<div class="section">
+							<h4 class="skip">하단메뉴</h4>
+							<img src="/images/gn/bottom_mn_sub.gif" width="595" height="34" alt="게임잡 하단 메뉴" usemap="#Map_bot">
+							<div class="fmSite">
+								<h4 class="skip">잡코리아 운영사이트</h4>
+								<ul id="acDiv" style="display:none">
+									<li><a href="http://www.jobkorea.co.kr" target="_blank">잡코리아</a></li>
+									<li><a href="http://www.hrpartners.co.kr" target="_blank">HR 파트너스</a></li>
+									<li><a href="http://www.devjob.co.kr" target="_blank">데브잡</a></li>
+									<li><a href="http://www.welldone.to/" target="_blank">웰던투</a></li>
+									<li><a href="http://www.albamon.com" target="_blank">알바몬</a></li>
+									<li><a href="http://www.campusmon.com" target="_blank">캠퍼스몬</a></li>
+									!-- <li><a href="http://www.bizmon.com" target="_blank">비즈몬</a></li> --
+								</ul>
+								<p class="arr"><a href="#acDivtoggle" onclick="javascript:ac_toggle();return false;"><img src="/images/gn/family_right_up_sub.gif" width="25" height="22" alt="클릭하세요" id="acImg"></a></p>
+							</div>
+						</div>
+						<div class="add">
+							<p class="bi"><a href="/"><img src="/images/gn/logo_bot.gif" width="131" height="51" alt="게임잡"></a></p>
+							<address>
+								서울특별시 서초구 서초대로 301 동익성봉빌딩 16~18층 잡코리아 대표: 윤병준<br>
+								사업자등록번호: 110-81-34859<em>통신판매업 신고번호: 2016-서울서초-0287호</em><br>
+								직업정보제공사업 신고번호 : 서울청 제2016-11호<br>
+								<b>일반문의</b> TEL: 02-3466-5310<em>FAX: 02-565-9351</em><em class="end">E-Mail:</em> <a href="mailto:help@gamejob.co.kr"><strong>help@gamejob.co.kr</strong></a><br>
+								<b>상품문의</b> TEL: 02-3466-5255<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAX: 0504-981-3752&nbsp;&nbsp;<em class="end">E-Mail:</em><a href="mailto:ad@gamejob.co.kr"><strong>ad@gamejob.co.kr</strong></a>
+							</address>
+							<p class="seal"><script src="https://seal.verisign.com/getseal?host_name=www.gamejob.co.kr&size=S&use_flash=YES&use_transparent=NO&lang=ko"></script></p>
+						</div>
+						!--include virtual=/Include/menu/online_digital.asp--
+						<span>Copyright ⓒ1998-2020, <em><a href="http://www.jobkorea.co.kr" target="_blank">잡코리아</a></em> All Rights Reserved.</span>
+					</div>
+					<map name="Map_bot">
+					   <area shape="rect" coords="0,6,42,29" href="http://company.jobkorea.co.kr"  target="_blank" alt="회사소개">
+						<area shape="rect" coords="55,6,99,29" href="/Service_GJ/Notice.asp" alt="공지사항">
+						<area shape="rect" coords="112,6,154,29" href="/Service_GJ/Partners.asp"  alt="제휴안내">
+						<area shape="rect" coords="169,6,233,29" href="/Service_GJ/Banner_QA.asp" alt="배너광고 문의">
+						<area shape="rect" coords="249,6,290,29" href="/Service_GJ/Sitemap.asp" alt="사이트맵">
+						<area shape="rect" coords="307,6,381,29" href="/Service_GJ/Provision_GG.asp" alt="게임잡 회원약관">
+						<area shape="rect" coords="395,6,478,29" href="/Service_GJ/privacy.asp" alt="개인정보취급방침">
+						<area shape="rect" coords="492,6,595,29" href="javascript:new_popup('/Service_GJ/Email_Refuse.asp','380','250');" alt="e-메일 무단 수집 거부">
+					</map> -->
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-124531-5");
+			 pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+<script type="text/javascript">	
+	//-- NSM Conversion Check Start
+    var Nsm_Code = "0";
+    var Nsm_Trans = new Date().getTime();
+
+	if (Nsm_Code != "0")
+	{
+		var nsmX = new Image();
+        nsmX.src = "http://ntracker.nsm-corp.com/c/rcv.php?id=20014&code=" + Nsm_Code + "&trans=" + Nsm_Trans;
+    }
+
+	function NsmConversionClick(Nsm_Code)
+	{
+        var nsmX = new Image();
+        var Nsm_Trans = new Date().getTime();
+		//alert(Nsm_Code);
+        nsmX.src = "http://ntracker.nsm-corp.com/c/rcv.php?id=20014&code=" + Nsm_Code + "&trans=" + Nsm_Trans;
+	}
+	//-- NSM Conversion Check End
+</script>
+<!-- AceCounter Log Gathering Script V.70.2008090201 -->
+<script language='javascript'>
+if( typeof HL_GUL == 'undefined' ){
+
+var HL_GUL = 'ngc13.nsm-corp.com';var HL_GPT='80'; var _AIMG = new Image(); var _bn=navigator.appName; var _PR = location.protocol=="https:"?"https://"+HL_GUL:"http://"+HL_GUL+":"+HL_GPT;if( _bn.indexOf("Netscape") > -1 || _bn=="Mozilla"){ setTimeout("_AIMG.src = _PR+'/?cookie';",1); } else{ _AIMG.src = _PR+'/?cookie'; };
+var _JV="AMZ2008090201";//script Version
+var HL_GCD = 'CN1B3593297292'; // gcode
+var _UD='undefined';var _UN='unknown';
+function _IX(s,t){return s.indexOf(t)}
+function _GV(b,a,c,d){ var f = b.split(c);for(var i=0;i<f.length; i++){ if( _IX(f[i],(a+d))==0) return f[i].substring(_IX(f[i],(a+d))+(a.length+d.length),f[i].length); }	return ''; }
+function _XV(b,a,c,d,e){ var f = b.split(c);var g='';for(var i=0;i<f.length; i++){ if( _IX(f[i],(a+d))==0){ try{eval(e+"=f[i].substring(_IX(f[i],(a+d))+(a.length+d.length),f[i].length);");}catch(_e){}; continue;}else{ if(g) g+= '&'; g+= f[i];}; } return g;};
+function _NOB(a){return (a!=_UD&&a>0)?new Object(a):new Object()}
+function _NIM(){return new Image()}
+function _IL(a){return a!=_UD?a.length:0}
+function _VF(a,b){return a!=_UD&&(typeof a==b)?1:0}
+function _LST(a,b){if(_IX(a,b)) a=a.substring(0,_IL(a));return a}
+function _CST(a,b){if(_IX(a,b)>0) a=a.substring(_IX(a,b)+_IL(b),_IL(a));return a}
+function _UL(a){a=_LST(a,'#');a=_CST(a,'://');return a}
+function _AA(a){return new Array(a?a:0)}
+function _IDV(a){return (typeof a!=_UD)?1:0}
+if(!_IDV(HL_GUL)) var HL_GUL ='ngc13.nsm-corp.com'; 
+if(!_IDV(HL_GPT)) var HL_GPT ='80';
+_DC = document.cookie ;
+function _AGC(nm) { var cn = nm + "="; var nl = cn.length; var cl = _DC.length; var i = 0; while ( i < cl ) { var j = i + nl; if ( _DC.substring( i, j ) == cn ){ var val = _DC.indexOf(";", j ); if ( val == -1 ) val = _DC.length; return unescape(_DC.substring(j, val)); }; i = _DC.indexOf(" ", i ) + 1; if ( i == 0 ) break; } return ''; }
+function _ASC( nm, val, exp ){var expd = new Date(); if ( exp ){ expd.setTime( expd.getTime() + ( exp * 1000 )); document.cookie = nm+"="+ escape(val) + "; expires="+ expd.toGMTString() +"; path="; }else{ document.cookie = nm + "=" + escape(val);};}
+function SetUID() {     var newid = ''; var d = new Date(); var t = Math.floor(d.getTime()/1000); newid = 'UID-' + t.toString(16).toUpperCase(); for ( var i = 0; i < 16; i++ ){ var n = Math.floor(Math.random() * 16).toString(16).toUpperCase(); newid += n; }       return newid; }
+var _FCV = _AGC("ACEFCID"); if ( !_FCV ) { _FCV = SetUID(); _ASC( "ACEFCID", _FCV , 86400 * 30 * 12 ); _FCV=_AGC("ACEFCID");}
+var _AIO = _NIM(); var _AIU = _NIM();  var _AIW = _NIM();  var _AIX = _NIM();  var _AIB = _NIM();  var __hdki_xit = _NIM();
+var _gX='/?xuid='+HL_GCD+'&sv='+_JV,_gF='/?fuid='+HL_GCD+'&sv='+_JV,_gU='/?uid='+HL_GCD+'&sv='+_JV+"&FCV="+_FCV,_gE='/?euid='+HL_GCD+'&sv='+_JV,_gW='/?wuid='+HL_GCD+'&sv='+_JV,_gO='/?ouid='+HL_GCD+'&sv='+_JV,_gB='/?buid='+HL_GCD+'&sv='+_JV;
+
+var _d=_rf=_fwd=_arg=_xrg=_av=_bv=_rl=_ak=_xrl=_cd=_cu=_bz='',_sv=11,_tz=20,_ja=_sc=_ul=_ua=_UA=_os=_vs=_UN,_je='n',_bR='blockedReferrer';
+if(!_IDV(_CODE)) var _CODE = '' ;
+_tz = Math.floor((new Date()).getTimezoneOffset()/60) + 29 ;if( _tz > 24 ) _tz = _tz - 24 ;
+// Javascript Variables
+if(!_IDV(_amt)) var _amt=0 ;if(!_IDV(_pk)) var _pk='' ;if(!_IDV(_pd)) var _pd='';if(!_IDV(_ct)) var _ct='';
+if(!_IDV(_ll)) var _ll='';if(!_IDV(_ag)) var _ag=0;	if(!_IDV(_id)) var _id='' ;if(!_IDV(_mr)) var _mr = _UN;
+if(!_IDV(_gd)) var _gd=_UN;if(!_IDV(_jn)) var _jn='';if(!_IDV(_jid)) var _jid='';if(!_IDV(_skey)) var _skey='';
+if(!_IDV(_ud1)) var _ud1='';if(!_IDV(_ud2)) var _ud2='';if(!_IDV(_ud3)) var _ud3='';
+if( !_ag ){ _ag = 0 ; }else{ _ag = parseInt(_ag); }
+if( _ag < 0 || _ag > 150 ){ _ag = 0; }
+if( _gd != 'man' && _gd != 'woman' ){ _gd =_UN;};if( _mr != 'married' && _mr != 'single' ){ _mr =_UN;};if( _jn != 'join' && _jn != 'withdraw' ){ _jn ='';};
+if( _ag > 0 || _gd == 'man' || _gd == 'woman'){ _id = 'member';}
+if( _jid != '' ){ _jid = 'member'; }
+_je = (navigator.javaEnabled()==true)?'1':'0';_bn=navigator.appName;
+if(_bn.substring(0,9)=="Microsoft") _bn="MSIE";
+_bN=(_bn=="Netscape"),_bI=(_bn=="MSIE"),_bO=(_IX(navigator.userAgent,"Opera")>-1);if(_bO)_bI='';
+_bz=navigator.appName; _pf=navigator.platform; _av=navigator.appVersion; _bv=parseFloat(_av) ;
+if(_bI){_cu=navigator.cpuClass;}else{_cu=navigator.oscpu;};
+if((_bn=="MSIE")&&(parseInt(_bv)==2)) _bv=3.01;_rf=document.referrer;var _prl='';var _frm=false;
+function _WO(a,b,c){window.open(a,b,c)}
+function ACEF_Tracking(a,b,c,d,e,f){ if(!_IDV(b)){var b = 'FLASH';}; if(!_IDV(e)){ var e = '0';};if(!_IDV(c)){ var c = '';};if(!_IDV(d)){ var d = '';}; var a_org=a; b = b.toUpperCase(); var b_org=b;	if(b_org=='FLASH_S'){ b='FLASH'; }; if( typeof CU_rl == 'undefined' ) var CU_rl = _PT(); if(_IDV(HL_GCD)){ var _AF_rl = document.URL; if(a.indexOf('://') < 0  && b_org != 'FLASH_S' ){ var _AT_rl  = ''; if( _AF_rl.indexOf('?') > 0 ){ _AF_rl = _AF_rl.substring(0,_AF_rl.indexOf('?'));}; var spurl = _AF_rl.split('/') ;	for(var ti=0;ti < spurl.length ; ti ++ ){ if( ti == spurl.length-1 ){ break ;}; if( _AT_rl  == '' ){ _AT_rl  = spurl[ti]; }else{ _AT_rl  += '/'+spurl[ti];}; }; var _AU_arg = ''; if( a.indexOf('?') > 0 ){ _AU_arg = a.substring(a.indexOf('?'),a.length); a = a.substring(0,a.indexOf('?')); }; var spurlt = a.split('/') ; if( spurlt.length > 0 ){ a = spurlt[spurlt.length-1];}; a = _AT_rl +'/'+a+_AU_arg;	_AF_rl=document.URL;}; _AF_rl = _AF_rl.substring(_AF_rl.indexOf('//')+2,_AF_rl.length); if( typeof f == 'undefined' ){ var f = a }else{f='http://'+_AF_rl.substring(0,_AF_rl.indexOf('/')+1)+f}; var _AS_rl = CU_rl+'/?xuid='+HL_GCD+'&url='+escape(_AF_rl)+'&xlnk='+escape(f)+'&fdv='+b+'&idx='+e+'&'; var _AF_img = new Image(); _AF_img.src = _AS_rl; if( b_org == 'FLASH' && a_org != '' ){ if(c==''){ window.location.href = a_org; }else{ if(d==''){ window.open(a_org,c);}else{ window.open(a_org,c,d); };};	};} ; }
+function _PT(){return location.protocol=="https:"?"https://"+HL_GUL:"http://"+HL_GUL+":"+HL_GPT}
+function _EL(a,b,c){if(a.addEventListener){a.addEventListener(b,c,false)}else if(a.attachEvent){a.attachEvent("on"+b,c)} }
+function _NA(a){return new Array(a?a:0)}
+function HL_ER(a,b,c,d){_xrg=_PT()+_gW+"&url="+escape(_UL(document.URL))+"&err="+((typeof a=="string")?a:"Unknown")+"&ern="+c+"&bz="+_bz+"&bv="+_vs+"&RID="+Math.random()+"&";
+if(_IX(_bn,"Netscape") > -1 || _bn == "Mozilla"){ setTimeout("_AIW.src=_xrg;",1); } else{ _AIW.src=_xrg; } }
+function HL_PL(a){if(!_IL(a))a=_UL(document.URL);
+_arg = _PT()+_gU;
+if( typeof HL_ERR !=_UD && HL_ERR == 'err'){ _arg = _PT()+_gE;};
+if( _ll.length > 0 ) _arg += "&md=b";
+_AIU.src = _arg+"&url="+escape(a)+"&ref="+escape(_rf)+"&cpu="+_cu+"&bz="+_bz+"&bv="+_vs+"&os="+_os+"&dim="+_d+"&cd="+_cd+"&je="+_je+"&jv="+_sv+"&tz="+_tz+"&ul="+_ul+"&ad_key="+escape(_ak)+"&skey="+escape(_skey)+"&age="+_ag+"&gender="+_gd+"&marry="+_mr+"&join="+_jn+"&member_key="+_id+"&jid="+_jid+"&udf1="+_ud1+"&udf2="+_ud2+"&udf3="+_ud3+"&amt="+_amt+"&frwd="+_fwd+"&pd="+escape(_pd)+"&ct="+escape(_ct)+"&ll="+escape(_ll)+"&RID="+Math.random()+"&";
+setTimeout("",300);
+}
+_EL(window,"error",HL_ER); //window Error
+if( typeof window.screen == 'object'){_sv=12;_d=screen.width+'*'+screen.height;_sc=_bI?screen.colorDepth:screen.pixelDepth;if(_sc==_UD)_sc=_UN;}
+_ro=_NA();if(_ro.toSource||(_bI&&_ro.shift))_sv=13;
+if( top && typeof top == 'object' &&_IL(top.frames)){eval("try{_rl=top.document.URL;}catch(_e){_rl='';};"); if( _rl != document.URL ) _frm = true;};
+if(_frm){ eval("try{_prl = top.document.URL;}catch(_e){_prl=_bR;};"); if(_prl == '') eval("try{_prl=parent.document.URL;}catch(_e){_prl='';};"); 
+if( _IX(_prl,'#') > 0 ) _prl=_prl.substring(0,_IX(_prl,'#')); 
+_prl=_LST(_prl,'#');
+if( _IX(_rf,'#') > 0 ) _rf=_rf.substring(0,_IX(_rf,'#')); 
+_prl=_LST(_prl,'/');_rf=_LST(_rf,'/');
+if( _rf == '' ) eval("try{_rf=parent.document.URL;}catch(_e){_rf=_bR;}"); 
+if(_rf==_bR||_prl==_bR){ _rf='',_prl='';}; if( _rf == _prl ){ eval("try{_rf=top.document.referrer;}catch(_e){_rf='';}"); 
+if( _rf == ''){ _rf = 'bookmark';};if( _IX(document.cookie,'ACEN_CK='+escape(_rf)) > -1 ){ _rf = _prl;} 
+else{ 
+if(_IX(_prl,'?') > 0){ _ak = _prl.substring(_IX(_prl,'?')+1,_prl.length); _prl = _ak; }
+if( _IX(_prl.toUpperCase(),'OVRAW=') >= 0 ){ _ak = 'src=overture&kw='+_GV(_prl.toUpperCase(),'OVRAW','&','=')+'&OVRAW='+_GV(_prl.toUpperCase(),'OVRAW','&','=')+'&OVKEY='+_GV(_prl.toUpperCase(),'OVKEY','&','=')+'&OVMTC='+_GV(_prl.toUpperCase(),'OVMTC','&','=').toLowerCase() }; 
+if(_IX(_prl,'gclid=') >= 0 ){ _ak='src=adwords'; }; if(_IX(_prl,'DWIT=') >= 0 ){_ak='src=dnet_cb';}; 
+if( _IX(_prl,"rcsite=") >= 0 &&  _IX(_prl,"rctype=") >= 0){ _prl += '&'; _ak = _prl.substring(_IX(_prl,'rcsite='),_prl.indexOf('&',_IX(_prl,'rcsite=')+7))+'-'+_prl.substring(_IX(_prl,'rctype=')+7,_prl.indexOf('&',_IX(_prl,'rctype=')+7))+'&'; };
+if( _GV(_prl,'src','&','=') ) _ak += '&src='+_GV(_prl,'src','&','='); if( _GV(_prl,'kw','&','=') ) _ak += '&kw='+_GV(_prl,'kw','&','='); if(_prl.length>0){ _prl = _XV(_prl,'FWDRL','&','=','_rf'); _rf = unescape(_rf); _ak = _XV(_ak,'FWDRL','&','=','_prl'); }; if( typeof FD_ref=='string' && FD_ref != '' ) _rf = FD_ref;
+_fwd = _GV(_prl,'FWDIDX','&','=');
+document.cookie='ACEN_CK='+escape(_rf)+';path=/;'; 
+}; 
+if(document.URL.indexOf('?')>0 && ( _IX(_ak,'rcsite=') < 0 && _IX(_ak,'NVAR=') < 0 && _IX(_ak,'src=') < 0 && _IX(_ak,'source=') < 0 ) ) _ak =document.URL.substring(document.URL.indexOf('?')+1,document.URL.length); }; 
+}
+else{ 
+_rf=_LST(_rf,'#');_ak=_CST(document.URL,'?');
+if( _IX(_ak,"rcsite=") > 0 &&  _IX(_ak,"rctype=") > 0){
+    _ak += '&';
+    _ak = _ak.substring(_IX(_ak,'rcsite='),_ak.indexOf('&',_IX(_ak,'rcsite=')+7))+'-'+_ak.substring(_IX(_ak,'rctype=')+7,_ak.indexOf('&',_IX(_ak,'rctype=')+7))+'&';
+}
+}
+_rl=document.URL;
+var _trl = _rl.split('?'); if(_trl.length>1){ _trl[1] = _XV(_trl[1],'FWDRL','&','=','_rf'); _rf = unescape(_rf); _fwd = _GV(_trl[1],'FWDIDX','&','='); _rl=_trl.join('?'); 
+_ak = _XV(_ak,'FWDRL','&','=','_prl');
+}; if( typeof FD_ref=='string' && FD_ref != '' ) _rf = FD_ref;
+if( _rf.indexOf('googlesyndication.com') > 0 ){ 
+var _rf_idx = _rf.indexOf('&url=');  if( _rf_idx > 0 ){ var _rf_t = unescape(_rf.substring(_rf_idx+5,_rf.indexOf('&',_rf_idx+5)));  if( _rf_t.length > 0 ){ _rf = _rf_t ;};  };  };
+_rl = _UL(_rl); _rf = _UL(_rf);
+
+if( typeof _rf_t != 'undefined' && _rf_t != '' ) _rf = _rf_t ;
+if( typeof _ak_t != 'undefined' && _ak_t != '' ) _ak = _ak_t ;
+
+if( typeof _rf==_UD||( _rf == '' )) _rf = 'bookmark' ;_cd=(_bI)?screen.colorDepth:screen.pixelDepth;
+_UA = navigator.userAgent;_ua = navigator.userAgent.toLowerCase();
+if (navigator.language){  _ul = navigator.language.toLowerCase();}else if(navigator.userLanguage){  _ul = navigator.userLanguage.toLowerCase();};
+
+_st = _IX(_UA,'(') + 1;_end = _IX(_UA,')');_str = _UA.substring(_st, _end);_if = _str.split('; ');_cmp = _UN ;
+
+if(_bI){ _cmp = navigator.appName; _str = _if[1].substring(5, _if[1].length); _vs = (parseFloat(_str)).toString();} 
+else if ( (_st = _IX(_ua,"opera")) > 0){ _cmp = "Opera" ;_vs = _ua.substring(_st+6, _ua.indexOf('.',_st+6)); } 
+else if ((_st = _IX(_ua,"firefox")) > 0){_cmp = "Firefox"; _vs = _ua.substring(_st+8, _ua.indexOf('.',_st+8)); } 
+else if ((_st = _IX(_ua,"netscape6")) > 0){ _cmp = "Netscape"; _vs = _ua.substring(_st+10, _ua.length);  
+if ((_st = _IX(_vs,"b")) > 0 ) { _str = _vs.substring(0,_IX(_vs,"b")); _vs = _str ;  };}
+else if ((_st = _IX(_ua,"netscape/7")) > 0){  _cmp = "Netscape";  _vs = _ua.substring(_st+9, _ua.length);  if ((_st = _IX(_vs,"b")) > 0 ){ _str = _vs.substring(0,_IX(_vs,"b")); _vs = _str;};
+}
+else{
+if (_IX(_ua,"gecko") > 0){ if(_IX(_ua,"safari")>0){ _cmp = "Safari";_ut = _ua.split('/');for( var ii=0;ii<_ut.length;ii++) if(_IX(_ut[ii],'safari')>0){ _vst = _ut[ii].split(' '); _vs = _vst[0];} }else{ _cmp = navigator.vendor;  } } else if (_IX(_ua,"nav") > 0){ _cmp = "Netscape Navigator";}else{ _cmp = navigator.appName;}; _av = _UA ; 
+}
+if (_IX(_vs,'.')<0){  _vs = _vs + '.0'}
+_bz = _cmp; 
+
+var nhn_ssn={uid:HL_GCD,g:HL_GUL,p:HL_GPT,s:_JV,rl:_rl,m:[],run:nhn_ssn?nhn_ssn.uid:this.uid};
+function CN1B3593297292(){
+var f={e:function(s,t){return s.indexOf(t);},f:function(o){var a;a=o;if(a.tagName=='A'){return a;}else{a = a.parentNode;};if(a.tagName=='A'){return a;}else{a = a.parentNode;};if(a.tagName=='A'){return a;}else{a = a.parentNode;};if(a.tagName=='A'){return a;}else{a = a.parentNode;};if(a.tagName=='A'){return a;};},ea:function(c,f){var wd;if(c=='click'){wd=window.document;}else{wd=window;}if(wd.addEventListener){wd.addEventListener(c,f,false)}else if(wd.attachEvent){wd.attachEvent("on"+c,f)} } };
+var p={h:location.host,p:(location.protocol=='https:')?"https://"+nhn_ssn.g:"http://"+nhn_ssn.g+":"+nhn_ssn.p,s:'/?xuid='+nhn_ssn.uid+'&sv='+nhn_ssn.s,u:function(){var r=document.URL;r=r.replace('#','');return r+'';},ol:new Image(0,0),xL:function(x){if(typeof(Amz_T_e)==s.u){p.ol.src=p.p+p.s+'&url='+escape(nhn_ssn.rl)+'&xlnk='+escape(x)+'&xidx=0&';nhn_ssn.m.push(p.ol);} } };
+var s={Lp:'a.tagName=="B" || a.tagName=="I" || a.tagName== "U" || a.tagName== "FONT" || a.tagName=="I" || a.tagName=="STRONG"'  ,f:'function',	j:'javascript:',u:'undefined'};
+var c={Run:function(){f.ea('click',this.ec);},ec:function(e){var ok='';var m = document.all ? event.srcElement : e.target;var a=m;var o=m.tagName;if(o=="A" || o=="AREA" || o=="IMG" || eval(s.Lp)){ok=c.lc(m);if(ok.length != 0){p.xL(unescape(ok));};	};},lc:function(o){try{var ar='';var obj;obj=f.f(o);if(typeof obj==s.u){return '';};ar = String(obj.href);if(ar.length == 0){return '';};ar=ar.replace(/\n|\s|#/g,'');ar=ar.replace(/'|"/g,' ');if(f.e(ar,'void(') == -1 && f.e(ar,'void0') == -1){	return ar;}else{return s.j + 'void(0)';};return '';}catch(er){return '';} } };
+if(p.u().charAt(0) == 'h'){if(nhn_ssn.uid!=nhn_ssn.run){c.Run(); } };
+};eval(nhn_ssn.uid + '();');
+
+if( _IX(_pf,_UD) >= 0 || _pf ==  '' ){ _os = _UN ;}else{ _os = _pf ; };
+if( _IX(_os,'Win32') >= 0 ){if( _IX(_av,'98')>=0){ _os = 'Windows 98';}else if( _IX(_av,'95')>=0 ){ _os = 'Windows 95';}else if( _IX(_av,'Me')>=0 ){ _os = 'Windows Me';}else if( _IX(_av,'NT')>=0 ){ _os = 'Windows NT';}else{ _os = 'Windows';};if( _IX(_ua,'nt 5.0')>=0){ _os = 'Windows 2000';};if( _IX(_ua,'nt 5.1')>=0){_os = 'Windows XP';if( _IX(_ua,'sv1') > 0 ){_os = 'Windows XP SP2';};};if( _IX(_ua,'nt 5.2')>=0){_os ='Windows Server 2003';};if( _IX(_ua,'nt 6.0')>=0){_os ='Windows Vista';};if( _IX(_ua,'nt 6.1')>=0){_os ='Windows 7';};};
+_pf_s = _pf.substring(0,4);if( _pf_s == 'Wind'){if( _pf_s == 'Win1'){_os = 'Windows 3.1';}else if( _pf_s == 'Mac6' ){ _os = 'Mac';}else if( _pf_s == 'MacO' ){ _os ='Mac';}else if( _pf_s == 'MacP' ){_os='Mac';}else if(_pf_s == 'Linu'){_os='Linux';}else if( _pf_s == 'WebT' ){ _os='WebTV';}else if(  _pf_s =='OSF1' ){ _os ='Compaq Open VMS';}else if(_pf_s == 'HP-U' ){ _os='HP Unix';}else if(  _pf_s == 'OS/2' ){ _os = 'OS/2' ;}else if( _pf_s == 'AIX4' ){ _os = 'AIX';}else if( _pf_s == 'Free' ){ _os = 'FreeBSD';}else if( _pf_s == 'SunO' ){ _os = 'SunO';}else if( _pf_s == 'Drea' ){ _os = 'Drea'; }else if( _pf_s == 'Plan' ){ _os = 'Plan'; }else{ _os = _UN; };};
+if( _cu == 'x86' ){ _cu = 'Intel x86';}else if( _cu == 'PPC' ){ _cu = 'Power PC';}else if( _cu == '68k' ){ _cu = 'Motorola 680x';}else if( _cu == 'Alpha' ){ _cu = 'Compaq Alpa';}else if( _cu == 'Arm' ){ _cu = 'ARM';}else{ _cu = _UN;};if( _d == '' || typeof _d==_UD ){ _d = '0*0';}
+
+HL_PL(_rl); // Site Logging
+}
+</script>
+<!-- AceCounter Log Gathering Script End -->
+ 
+<!--//2018.01.16_데이터 스토리 스크립트 삽입 -->
+<script type="text/javascript" src="/include/js/dslog.js" id="dslog_tag"></script>
+<script type="text/javascript">
+	if (window._dslog) { 
+		window._dslog.setUID(""); 
+		window._dslog.dispatch(); 
+	} 
+	else { 
+		var dslog_tag = document.getElementById("dslog_tag"); 
+		if (dslog_tag != null && dslog_tag != undefined) { 
+				dslog_tag.onload = dslog_tag.onreadystatechange = function () { 
+				dslog_tag.onload = dslog_tag.onreadystatechange = null; 
+					window._dslog.setUIDCookie(""); 
+					window._dslog.dispatch() 
+				}
+		}
+	} 
+</script>
+
+<script type="text/javascript">
+	$(function(){
+		var date = new Date();
+		date = date.getFullYear();
+		var data = 'Copyright ⓒ1998-' + date +', <em>잡코리아</em> All Rights Reserved.';
+		$(".cpr").html(data);
+	});
+</script>
+</div>
+
+<!-- + 더보기 레이어 -->
+<div class="inheritReset lyTemp_1" style="position:relative;">
+	<div class="lyText" style="width:150px !important; position:absolute; !important;display:none;" id="PlusContent"></div>
+</div>
+    
+<script type="text/javascript" language="javascript">
+<!--
+	var PlusContentView = function(PlusContent, evt, currentObj)
+	{
+		if(!evt) var evt = evt || window.event;					//Event처리 유부 체크
+		var newestBody = document.documentElement;	//최신버전의 브라우저들
+		var oldBody = document.body;						//구 버전의 브라우저들
+
+		if (newestBody)
+		{
+			var left, top;
+			if (evt.pageX)
+			{
+				left = evt.pageX;
+				top = evt.pageY;
+			}
+			else if (evt.clientX)
+			{
+				left = evt.clientX + newestBody.scrollLeft - newestBody.clientLeft //- currentObj.offsetLeft;
+				top = evt.clientY + newestBody.scrollTop - newestBody.clientTop //- currentObj.offsetTop;
+			}
+			if (newestBody.parentElement && newestBody.parentElement.clientLeft)
+			{
+				var b = newestBody.parentElement;
+				left += b.scrollLeft - b.clientLeft;
+				top += b.scrollTop - b.clientTop;
+			}
+		}
+		else if (oldBody)
+		{
+			var left, top;
+			if (evt.pageX)
+			{
+				left = evt.pageX;
+				top = evt.pageY;
+			}
+			else if (evt.clientX)
+			{
+				left = evt.clientX + oldBody.scrollLeft - oldBody.clientLeft //- currentObj.offsetLeft;
+				top = evt.clientY + oldBody.scrollTop - oldBody.clientTop //- currentObj.offsetTop;
+			}
+			if (oldBody.parentElement && oldBody.parentElement.clientLeft)
+			{
+				var b = oldBody.parentElement;
+				left += b.scrollLeft - b.clientLeft;
+				top += b.scrollTop - b.clientTop;
+			}
+		}
+
+		var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1
+		var dom=document.getElementById&&navigator.userAgent.indexOf("Opera")==-1
+
+		//와이드 모니터 (document.body.clientWidth/2) 처리
+		left = left - (document.body.clientWidth/2) + 500
+		top = top - 220;
+					
+		if (ie4 || dom)
+		{ 
+			document.getElementById("PlusContent").style.display = "block";
+			document.getElementById("PlusContent").innerHTML = "<p class='normal'>" + PlusContent + "</p>";
+			document.getElementById("PlusContent").style.position = "absolute";
+			document.getElementById("PlusContent").style.top = top + "px";
+			document.getElementById("PlusContent").style.left = parseInt(left) - 150 + "px";
+			document.getElementById("PlusContent").zindex = "500";
+		}
+		else if (document.layers)
+		{ 
+			document.PlusContent.display = "block";
+			document.PlusContent.innerHTML = "<p class='normal'>" + PlusContent + "</p>";
+			document.PlusContent.position = "absolute";
+			document.PlusContent.top = top + "px";
+			document.PlusContent.left = parseInt(left) - 150 + "px";
+			document.PlusContent.zindex = "500";
+		}
+	}
+
+	var PlusContentOut = function()
+	{
+		var ie=document.all&&navigator.userAgent.indexOf("Opera")==-1
+
+		if (ie || document.getElementById)
+		{ 
+			document.getElementById("PlusContent").style.display = "none";
+		}
+		else if (document.layers)
+		{ 
+			document.PlusContent.display = "none";
+		}
+    }
+    
+    //게임잡 앱으로 이동
+    function moveAppEvent(moveurl) {
+
+        var isIos = navigator.userAgent.match(/(ipod|iphone|ipad)/i) ? true : false;
+        var isAndroid = navigator.userAgent.match(/Android/i) ? true : false;
+        var isMobile = isAndroid || isIos;
+        
+        if (isMobile) {
+            if (isAndroid) {     
+                //alert('isMobile : '+isMobile+', isAndroid : ' + isAndroid)
+                if (navigator.userAgent.match(/Chrome/i)) {
+
+                    if (window.opener != null) {
+                        setTimeout(function () {
+                            window.close();
+                            return false;
+                        }, 300);
+                    } 
+
+                    setTimeout(function () {
+                        //window.open(moveurl, '_blank'); 
+                        location.replace(moveurl);
+                        return false;
+                    }, 0);
+
+                    //앱설치:마켓으로 이동
+                    setTimeout(function () {
+                        //location.replace("intent://app#Intent;scheme=gamejob;package=com.jobkorea.gamejob;S.browser_fallback_url=market%3A%2F%2Fdetails?id=com.jobkorea.gamejob;end");
+                        location.href = "intent://app#Intent;scheme=gamejob;package=com.jobkorea.gamejob;S.browser_fallback_url=market%3A%2F%2Fdetails?id=com.jobkorea.gamejob;end";                        
+                        return false;
+                    }, 200); 
+                } 
+            }
+            else if (navigator.userAgent.match(/iPhone/)) {            
+                //alert('isMobile : '+isMobile+', isIos : '+isIos)   
+                var visitedAt = (new Date()).getTime(); // 방문 시간
+
+                if (window.opener != null) {
+                    setTimeout(function () {
+                        window.close();
+                        return false;
+                    }, 300);
+                } 
+                
+                setTimeout(function () {                    
+                    //window.open(moveurl, '_blank'); 
+                    //window.location = moveurl;
+                    //location.replace(moveurl);
+                    location.href = moveurl;
+                    return false;
+                }, 0);
+                
+
+                //앱설치:마켓으로 이동
+                setTimeout(function () { 
+                    if ((new Date()).getTime() - visitedAt < 2000) {
+                        //window.location = "https://itunes.apple.com/us/app/geimjab-geimjeonmun-chwieobjeongbo/id1053353110?l=ko&ls=1&mt=8";                     
+                        location.href = "https://itunes.apple.com/us/app/geimjab-geimjeonmun-chwieobjeongbo/id1053353110?l=ko&ls=1&mt=8";     
+                        return false;
+                    }        
+                }, 200); 
+                 
+            } 
+            else {     
+                //alert(moveurl);         
+                //window.location(moveurl);
+                location.href = moveurl;
+            }
+        }
+    }
+//-->
+</script>
+    
+    
+    
+
+<!--// 앱다운 유도팝업 -->
+<div class="appdown_mobileweb" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100001;display:none;">
+  <div class="lyInner"style="position:absolute;top:30%;left:15%;width:70%;text-align:center;">
+    <a href="javascript:;" onClick="moveAppEvent('');" target="_blank"><img src="http://i.gamejob.co.kr/pc/images/banner/appdown_mobileweb.png" alt="게임잡은 모바일웹 페이지가 없어요! 앱으로 보시겠어요? 앱 설치하기" style="width:100%"></a>
+    <button type="button" class="close" style="display:block;position:absolute;top:0;right:0;padding:3% 3% 7% 7%;width:3.7%;border:none;background:transparent;box-sizing:content-box;" onclick="$('.appdown_mobileweb').hide();"><img src="http://i.gamejob.co.kr/pc/images/banner/appdown_mobileweb_close.png" alt="앱다운로드 레이어 닫기" style="width:100%" ></button>
+  </div>
+</div>
+<!--  앱다운 유도팝업 //-->
+
+</body>
+</html> 
+
+
+
+  <script type="text/javascript">
+    var _NiKwdAdvertiserID = "97";
+    var _NiKwdTrackingID = "334";
+    var _directory = "";
+    var _category = "";
+    var _salesPrice = "0";
+    var _pageDepth = "final";
+  </script>
+  <script type="text/javascript" src="/Include/Js/NiKwd.roi.tracer.land.js"></script>
+

@@ -1,0 +1,53 @@
+기지 내부
+
+빨10
+초11
+파12
+
+\C[11]'Battle-Arm'\C[0]
+\C[11]'Reflection Shield'\C[0]
+\C[11]'Emp-Nova'\C[0]
+\C[11]'Auto-Turret'\C[0]
+\C[11]'Pulse-Gear'\C[0]
+
+
+
+\C[10]'Plasma-Gun'\C[0]
+\C[10]'Warp-Plasma'\C[0]
+
+
+
+\C[12]'알프'\C[0]
+\C[12]'크리스틴'\C[0]
+\C[12]'Energy-Station'\C[0]
+
+
+
+
+기지 외부
+
+파13
+빨9
+초20
+
+
+\C[20]'Battle-Arm'\C[0]
+\C[20]'Reflection Shield'\C[0]
+\C[20]'Emp-Nova'\C[0]
+\C[20]'Auto-Turret'\C[0]
+\C[20]'Boom-Shotgun'\C[0]
+\C[20]'Pulse-Gear'\C[0]
+
+\C[9]'Plasma-Gun'\C[0]
+\C[9]'warp-plasma'\C[0]
+
+
+
+\C[13]'알프'\C[0]
+\C[13]'크리스틴'\C[0]
+\C[13]'Energy-station'\C[0]
+
+
+
+
+
